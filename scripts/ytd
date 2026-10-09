@@ -1,0 +1,11 @@
+#!/bin/nu
+
+let search = fuzzel -d
+let video = ytfzf -LD $search
+
+try {
+    $video | yt-dlp -x --audio-format mp3 --embed-metadata --embed-thumbnail -o "$HOME/Music/%(title)s.%(ext)s" $"ytsearch1:($in)"
+    notify-send $"Download successful!\nSearch: ($search)\nResult: ($video)"
+} catch {|e|
+    notify-send $"($e.msg). ($e.details.code)"
+}

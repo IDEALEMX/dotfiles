@@ -1,0 +1,16 @@
+#!/bin/nu
+
+let pick = [
+  "clipboard-history"
+  "get-music"
+  "pick-wallpaper"
+  "logout-menu"
+] | to txt | fuzzel --dmenu
+
+match $pick {
+  "pick-wallpaper" => ~/scripts/wals
+  "logout-menu" => ~/scripts/power
+  "get-music" => ~/scripts/ytd
+  "clipboard-history" => {cliphist list | fuzzel --dmenu | cliphist decode | wl-copy}
+}
+

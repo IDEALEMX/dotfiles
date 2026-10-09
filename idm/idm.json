@@ -1,0 +1,22 @@
+{
+    "dotfile-path" : "~/dotfiles/",
+    "paths" : {
+        "~/.config/" : {
+            "fastfetch" : {},
+            "fuzzel" : {},
+            "hypr" : {},
+            "idm" : {},
+            "kitty" : {},
+            "mpd" : {},
+            "nushell" : { "alias" : "nu" },
+            "nvim" : {},
+            "rmpc" : {},
+            "rofi" : {},
+            "waybar" : {}
+        },
+
+        "~/" : {
+            "scripts" : {}
+        }
+    }
+}

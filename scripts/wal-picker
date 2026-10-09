@@ -1,0 +1,10 @@
+#!/bin/sh
+
+find ~/walls/ -type f \
+  \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) |
+while IFS= read -r file; do
+    printf '%s\0icon\x1fthumbnail://%s\n' \
+        "$(basename "$file")" "$file"
+done |
+rofi -dmenu -show-icons -p
+

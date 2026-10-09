@@ -1,0 +1,15 @@
+[2026-09-27 02:50:26.120] [info] Using configuration file /home/ideale/.config/waybar/config.jsonc
+[2026-09-27 02:50:26.120] [info] Including resource file: ~/.config/waybar/modules/custom/*.jsonc
+[2026-09-27 02:50:26.120] [info] Including resource file: ~/.config/waybar/modules/hyprland/*.jsonc
+[2026-09-27 02:50:26.120] [info] Including resource file: ~/.config/waybar/modules/*.jsonc
+[2026-09-27 02:50:26.125] [info] Using CSS file /home/ideale/.config/waybar/style.css
+[2026-09-27 02:50:26.138] [warning] module hyprland/workspaces: Disabling module "hyprland/workspaces", Hyprland IPC: HYPRLAND_INSTANCE_SIGNATURE was not set! (Is Hyprland running?)
+[2026-09-27 02:50:26.138] [warning] Hyprland is not running, Hyprland IPC will not be available.
+[2026-09-27 02:50:26.139] [warning] module hyprland/window: Disabling module "hyprland/window", Hyprland IPC: HYPRLAND_INSTANCE_SIGNATURE was not set! (Is Hyprland running?)
+/home/ideale/.config/waybar/scripts/update: line 41: checkupdates: command not found
+Charging
+[2026-09-27 02:50:26.304] [info] Bar configured (width: 1920, height: 29) for output: eDP-1
+[2026-09-27 02:50:27.899] [info] Quitting.
+[2026-09-27 02:50:27.914] [info] Hyprland IPC stopping...
+[2026-09-27 02:50:27.914] [error] Hyprland IPC: Couldn't shutdown socket
+[2026-09-27 02:50:32.089] [error] Error in command line: Unrecognised token: &

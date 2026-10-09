@@ -1,0 +1,32 @@
+#!/usr/bin/env nu
+#
+# Launch a power menu
+#
+# Dependencies:
+#   - fzf
+#
+# Author:  Jesse Mirabel <sejjymvm@gmail.com>
+# Date:    August 19, 2025
+# License: MIT
+
+let list = [
+    "Lock"
+    "Logout"
+    "Suspend"
+    "Hibernate"
+    "Reboot"
+    "Shutdown"
+]
+
+let selected = ($list | str join "\n" | fuzzel --dmenu)
+
+match $selected {
+    "Lock" => { loginctl lock-session }
+    "Logout" => { hyprshutdown }
+    "Suspend" => { systemctl suspend }
+    "Hibernate" => { systemctl hibernate }
+    "Reboot" => { systemctl reboot }
+    "Shutdown" => { systemctl poweroff }
+    _ => {}
+}
+

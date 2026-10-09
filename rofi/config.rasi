@@ -1,0 +1,43 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
+configuration {
+    show-icons: true;
+}
+
+
+window {
+    width: 70%;
+    height: 70%;
+}
+
+* {
+    icon-size: 64px;
+}
+
+listview {
+    columns: 5;
+    lines: 3;
+    spacing: 18px;
+    layout: vertical;
+    flow: horizontal;
+    fixed-height: true;
+    fixed-columns: true;
+    dynamic: false;
+}
+
+element {
+    orientation: vertical;
+    padding: 12px;
+    spacing: 8px;
+}
+
+element-icon {
+    size: 256px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+

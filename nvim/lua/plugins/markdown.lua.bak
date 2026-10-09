@@ -1,0 +1,91 @@
+return {
+    {
+        "Thiago4532/mdmath.nvim",
+    },
+
+    {
+        "yousefhadder/markdown-plus.nvim",
+        ft = "markdown",
+        opts = {
+            -- Your custom configuration here
+        },
+    },
+
+    -- Live preview
+    {
+        "selimacerbas/mdkite.nvim",
+        -- a kitehost.nvim checkout under another dir name needs its spec to
+        -- say name = "kitehost.nvim", or lazy.nvim clones upstream beside it
+        dependencies = { "selimacerbas/kitehost.nvim" },
+        -- kitehost.nvim v2.0.0 or newer, the first release with its Host check
+        config = function()
+            require("mdkite").setup({
+                -- all optional; sane defaults shown
+                instance_mode = "takeover",  -- "takeover" (one tab) or "multi" (tab per instance)
+                port = 0,                    -- 0 = auto (8421 for takeover, OS-assigned for multi)
+                open_browser = true,
+                default_theme = "dark",      -- "dark" or "light"; initial preview theme
+                debounce_ms = 300,
+            })
+        end,
+    },
+
+    {
+        "echaya/neowiki.nvim",
+        opts = {
+            wiki_dirs = {
+                -- neowiki.nvim supports both absolute and tilde-expanded paths
+                { name = "Core", path = "~/sb/" },
+            },
+            index_file = "index.md",
+
+            keymaps = {
+                -- In Normal mode, follows the link under the cursor.
+                -- In Visual mode, creates a link from the selection.
+                action_link = "<CR>",
+                action_link_vsplit = "<S-CR>",
+                action_link_split = "<C-CR>",
+
+                -- Jumps to the next link in the buffer.
+                next_link = "<Tab>",
+                -- Jumps to the previous link in the buffer.
+                prev_link = "<S-Tab>",
+                -- Navigate back and forth in history.
+                navigate_back = "[[",
+                navigate_forward = "]]",
+                -- Jumps to the index page of the current wiki.
+                jump_to_index = "<Backspace>",
+
+                -- Renames the current wiki page and updates backlinks.
+                rename_page = "<leader>wr",
+                -- Deletes the current wiki page and updates backlinks.
+                delete_page = "<leader>wd",
+                -- Inserts a link to another wiki page.
+                insert_link = "<leader>wi",
+                -- Removes all links in the current file that point to non-existent pages.
+                cleanup_links = "<leader>wc",
+
+                -- Toggles the status of a gtd item.
+                -- Works on the current line in Normal mode and on the selection in Visual mode.
+                toggle_task = "<leader>wt",
+
+                -- Closes the floating window.
+                close_float = "q",
+            },
+        },
+
+        keys = {
+            { "<leader>wB", "<cmd>lua require('neowiki').open_wiki()<cr>", desc = "Open Wiki" },
+            { "<leader>wT", "<cmd>lua require('neowiki').open_wiki_new_tab()<cr>", desc = "Open Wiki in Tab" },
+        },
+    },
+
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },            -- if you use the mini.nvim suite
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },        -- if you use standalone mini plugins
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+        ---@module 'render-markdown'
+        ---@type render.md.UserConfig
+    },
+}

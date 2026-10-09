@@ -1,0 +1,44 @@
+/* Palette */
+@define-color rosewater    #96908f;
+@define-color flamingo     #9e9998;
+@define-color pink         #aba3a1;
+@define-color mauve        #aea8a6;
+@define-color red          #aaa7a8;
+@define-color maroon       #babab9;
+@define-color peach        #a096a0;
+@define-color yellow       #7a637a;
+@define-color green        #C8C0BF;
+@define-color teal         #D3CCCB;
+@define-color sky          #E4DAD7;
+@define-color sapphire     #E9E1DE;
+@define-color blue         #E3DFE0;
+@define-color lavender     #F9F9F7;
+@define-color text         #c8c7c8;
+@define-color subtext1     #242123;
+@define-color subtext0     #96908f;
+@define-color overlay2     #9e9998;
+@define-color overlay1     #aba3a1;
+@define-color overlay0     #aea8a6;
+@define-color surface2     #aaa7a8;
+@define-color surface1     #babab9;
+@define-color surface0     #C8C0BF;
+@define-color base         #242123;
+@define-color mantle       #96908f;
+@define-color crust        #242123;
+
+/* Base colors */
+@define-color accent       @lavender;
+@define-color fg           @text;
+@define-color bg_0         @crust;
+@define-color bg_1         @mantle;
+@define-color bg_2         @base;
+@define-color bg_3         @surface0;
+@define-color border       @subtext0;
+@define-color shadow       shade(@bg_0, 0.75);
+
+/* States */
+@define-color warning      @yellow;
+@define-color critical     @red;
+@define-color charging     @green;
+@define-color bg_alt       @base;
+@define-color fg_alt       alpha(@fg, 0.75);

@@ -1,0 +1,2 @@
+#!/bin/nu
+source $nu.config-path; rmpc
