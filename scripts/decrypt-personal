@@ -1,0 +1,3 @@
+#!/bin/bash
+age -d -i $1 ~/dotfiles/personal.tar.gz.age |
+    tar -xzf - -C ~/dotfiles/

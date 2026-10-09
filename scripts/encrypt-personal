@@ -1,0 +1,4 @@
+#!/bin/bash
+tar -czf - -C ~/dotfiles personal/ |
+    age -R ~/dotfiles/scripts/public.txt \
+        -o ~/dotfiles/personal.tar.gz.age
