@@ -1,0 +1,15 @@
+sort=-time
+layer=overlay
+background-color=#140d20
+width=280
+height=1080
+border-size=2
+border-color=#b115a5
+icons=0
+max-icon-size=64
+default-timeout=8000
+ignore-timeout=1
+font=JetBrains Mono 12
+
+[urgency=high]
+default-timeout=0

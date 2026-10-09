@@ -25,7 +25,6 @@ $env.config.show_banner = false
 $env.PROMPT_INDICATOR = "::󰘧 "
 
 # Aliases 
-alias doom = ~/.config/emacs/bin/doom
 alias n = nvim
 alias tags = easytag ~/Music/
 

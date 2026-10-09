@@ -10,6 +10,7 @@
             "mpd" : {},
             "nushell" : { "alias" : "nu" },
             "nvim" : {},
+            "mako" : {},
             "rmpc" : {},
             "rofi" : {},
             "waybar" : {}
@@ -17,7 +18,6 @@
 
         "~/" : {
             "scripts" : {}
-            ".testrc" : { "alias" : "test" }
         }
     }
 }
