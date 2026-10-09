@@ -17,6 +17,7 @@
 
         "~/" : {
             "scripts" : {}
+            ".testrc" : { "alias" : "test" }
         }
     }
 }
