@@ -6,12 +6,6 @@ def set-wal [wal_path: path] {
 
   let colors = open ~/.cache/wal/colors.json | $in.colors
 
-# Niri
-  open --raw ~/.config/niri/config.kdl 
-  |str replace --regex 'active-color ".+"' $"active-color \"($colors.color13)\"" 
-  |str replace --regex 'inactive-color ".+"' $"inactive-color \"($colors.color1)\"" 
-  |save -f ~/.config/niri/config.kdl
-
 # Hyprland
 # active_border = { colors = {"#000000ff", "#ffffffff"}, angle = 45 },
 # inactive_border = "#111111ff",
@@ -31,61 +25,61 @@ def set-wal [wal_path: path] {
   makoctl reload
 
 # Fuzzel
-open --raw ~/.config/fuzzel/fuzzel.ini
-| str replace --regex 'background=.*\n' $"background=($colors.color0 | str trim --char '#')ff\n"
-| str replace --regex 'text=.*\n' $"text=($colors.color15 | str trim --char '#')ff\n"
-| str replace --regex 'match=.*\n' $"match=($colors.color1 | str trim --char '#')ff\n"
-| str replace --regex 'selection-match=.*\n' $"selection-match=($colors.color9 | str trim --char '#')ff\n"
-| str replace --regex 'selection=.*\n' $"selection=($colors.color1 | str trim --char '#')ff\n"
-| str replace --regex 'selection-text=.*\n' $"selection-text=($colors.color15 | str trim --char '#')ff\n"
-| str replace --regex 'border=.*\n' $"border=($colors.color4 | str trim --char '#')ff\n"
-| save -f ~/.config/fuzzel/fuzzel.ini
+  open --raw ~/.config/fuzzel/fuzzel.ini
+  | str replace --regex 'background=.*\n' $"background=($colors.color0 | str trim --char '#')ff\n"
+  | str replace --regex 'text=.*\n' $"text=($colors.color15 | str trim --char '#')ff\n"
+  | str replace --regex 'match=.*\n' $"match=($colors.color1 | str trim --char '#')ff\n"
+  | str replace --regex 'selection-match=.*\n' $"selection-match=($colors.color9 | str trim --char '#')ff\n"
+  | str replace --regex 'selection=.*\n' $"selection=($colors.color1 | str trim --char '#')ff\n"
+  | str replace --regex 'selection-text=.*\n' $"selection-text=($colors.color15 | str trim --char '#')ff\n"
+  | str replace --regex 'border=.*\n' $"border=($colors.color4 | str trim --char '#')ff\n"
+  | save -f ~/.config/fuzzel/fuzzel.ini
 
 # Waybar
   let waybar_theme = $'/* Palette */
-@define-color rosewater    ($colors.color1);
-@define-color flamingo     ($colors.color2);
-@define-color pink         ($colors.color3);
-@define-color mauve        ($colors.color4);
-@define-color red          ($colors.color5);
-@define-color maroon       ($colors.color6);
-@define-color peach        ($colors.color7);
-@define-color yellow       ($colors.color8);
-@define-color green        ($colors.color9);
-@define-color teal         ($colors.color10);
-@define-color sky          ($colors.color11);
-@define-color sapphire     ($colors.color12);
-@define-color blue         ($colors.color13);
-@define-color lavender     ($colors.color14);
-@define-color text         ($colors.color15);
-@define-color subtext1     ($colors.color0);
-@define-color subtext0     ($colors.color1);
-@define-color overlay2     ($colors.color2);
-@define-color overlay1     ($colors.color3);
-@define-color overlay0     ($colors.color4);
-@define-color surface2     ($colors.color5);
-@define-color surface1     ($colors.color6);
-@define-color surface0     ($colors.color9);
-@define-color base         ($colors.color0);
-@define-color mantle       ($colors.color1);
-@define-color crust        ($colors.color0);
+  @define-color rosewater    ($colors.color1);
+  @define-color flamingo     ($colors.color2);
+  @define-color pink         ($colors.color3);
+  @define-color mauve        ($colors.color4);
+  @define-color red          ($colors.color5);
+  @define-color maroon       ($colors.color6);
+  @define-color peach        ($colors.color7);
+  @define-color yellow       ($colors.color8);
+  @define-color green        ($colors.color9);
+  @define-color teal         ($colors.color10);
+  @define-color sky          ($colors.color11);
+  @define-color sapphire     ($colors.color12);
+  @define-color blue         ($colors.color13);
+  @define-color lavender     ($colors.color14);
+  @define-color text         ($colors.color15);
+  @define-color subtext1     ($colors.color0);
+  @define-color subtext0     ($colors.color1);
+  @define-color overlay2     ($colors.color2);
+  @define-color overlay1     ($colors.color3);
+  @define-color overlay0     ($colors.color4);
+  @define-color surface2     ($colors.color5);
+  @define-color surface1     ($colors.color6);
+  @define-color surface0     ($colors.color9);
+  @define-color base         ($colors.color0);
+  @define-color mantle       ($colors.color1);
+  @define-color crust        ($colors.color0);
 
-/* Base colors */
-@define-color accent       @lavender;
-@define-color fg           @text;
-@define-color bg_0         @crust;
-@define-color bg_1         @mantle;
-@define-color bg_2         @base;
-@define-color bg_3         @surface0;
-@define-color border       @subtext0;
-@define-color shadow       shade("(")@bg_0, 0.75(")");
+  /* Base colors */
+  @define-color accent       @lavender;
+  @define-color fg           @text;
+  @define-color bg_0         @crust;
+  @define-color bg_1         @mantle;
+  @define-color bg_2         @base;
+  @define-color bg_3         @surface0;
+  @define-color border       @subtext0;
+  @define-color shadow       shade("(")@bg_0, 0.75(")");
 
-/* States */
-@define-color warning      @yellow;
-@define-color critical     @red;
-@define-color charging     @green;
-@define-color bg_alt       @base;
-@define-color fg_alt       alpha("(")@fg, 0.75(")");'
+  /* States */
+  @define-color warning      @yellow;
+  @define-color critical     @red;
+  @define-color charging     @green;
+  @define-color bg_alt       @base;
+  @define-color fg_alt       alpha("(")@fg, 0.75(")");'
 
   $waybar_theme | save -f ~/.config/waybar/themes/pywal.css
 }

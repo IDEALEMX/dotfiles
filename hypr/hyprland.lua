@@ -30,7 +30,6 @@ hl.monitor({
     scale    = "1",
 })
 
-
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
@@ -102,8 +101,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#b77837ff",
-            inactive_border = "#0b0408ff",
+            active_border = "#ba6789ff",
+            inactive_border = "#150f22ff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -116,7 +115,7 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 15,
+        rounding       = 25,
         rounding_power = 1,
 
         -- Change transparency of focused and unfocused windows
@@ -127,7 +126,7 @@ hl.config({
             enabled      = true,
             range        = 25,
             render_power = 25,
-            color = "#F4A04A15",
+            color = "#F98AB715",
         },
 
         blur = {

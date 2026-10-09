@@ -1,6 +1,7 @@
 {
     "dotfile-path" : "~/dotfiles/",
     "run-pre-gpush" : "~/dotfiles/scripts/encrypt-personal",
+
     "paths" : {
         "~/.config/" : {
             "fastfetch" : {},
@@ -22,7 +23,7 @@
             "personal/notebook" : { 
                 "as" : "notebook", 
                 "alias" : "notebook" 
-            },
+            }
         }
     }
 }
