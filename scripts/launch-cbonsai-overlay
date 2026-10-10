@@ -1,0 +1,2 @@
+#!/bin/bash
+kitty --class cbonsai-overlay --config ~/.config/kitty/cava.conf nu ~/scripts/kitty-launch "cbonsai -li"

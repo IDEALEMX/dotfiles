@@ -35,6 +35,11 @@ def set-wal [wal_path: path] {
   | str replace --regex 'border=.*\n' $"border=($colors.color4 | str trim --char '#')ff\n"
   | save -f ~/.config/fuzzel/fuzzel.ini
 
+# Cava (audio visualizer)
+  open --raw ~/.config/cava/config
+  | str replace --regex "foreground = '.*'\n" $"foreground = '($colors.color11)'\n"
+  | save -f ~/.config/cava/config
+
 # Waybar
   let waybar_theme = $'/* Palette */
   @define-color rosewater    ($colors.color1);

@@ -101,8 +101,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#818181ff",
-            inactive_border = "#090404ff",
+            active_border = "#b77837ff",
+            inactive_border = "#0b0408ff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -126,7 +126,7 @@ hl.config({
             enabled      = true,
             range        = 25,
             render_power = 25,
-            color = "#ADADAD15",
+            color = "#F4A04A15",
         },
 
         blur = {
@@ -443,5 +443,31 @@ hl.window_rule ({
     move = {
         0,
         "(monitor_h - (monitor_h * 0.05))"
+    }
+})
+
+hl.window_rule ({
+    match = {class = "^cbonsai-overlay$"},
+    float = true,
+
+    pin = true,
+    no_initial_focus = true,
+    no_focus = true,
+
+    no_anim = true,
+    border_size = 0,
+    rounding = 0,
+
+    opacity = 0.85,
+    no_blur = true,
+
+    size = {
+        "(monitor_w)",
+        "(monitor_h)",
+    },
+
+    move = {
+        "(monitor_w * 0.30)",
+        -10
     }
 })

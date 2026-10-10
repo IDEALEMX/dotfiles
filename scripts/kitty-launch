@@ -1,0 +1,5 @@
+#!/bin/nu
+def main [arg] {
+  cat ~/.cache/wal/sequences
+  bash -c $arg
+}

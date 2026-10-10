@@ -6,6 +6,7 @@ let pick = [
   "clipboard-history"
   "logout-menu"
   "toggle-cava"
+  "toggle-cbonsai"
 ] | to txt | fuzzel --dmenu
 
 match $pick {
@@ -14,5 +15,6 @@ match $pick {
   "get-music" => ~/scripts/ytd
   "clipboard-history" => {cliphist list | fuzzel --dmenu | cliphist decode | wl-copy}
   "toggle-cava" => {~/dotfiles/scripts/toggle-class cava-overlay}
+  "toggle-cbonsai" => {~/dotfiles/scripts/toggle-class cbonsai-overlay}
 }
 
