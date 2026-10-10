@@ -40,6 +40,35 @@ def set-wal [wal_path: path] {
   | str replace --regex "foreground = '.*'\n" $"foreground = '($colors.color11)'\n"
   | save -f ~/.config/cava/config
 
+# Kitty
+  open --raw ~/.config/kitty/current-theme.conf
+  | str replace --regex 'background .+\n' $"background ($colors.color0)\n"
+  | str replace --regex 'foreground .+\n' $"foreground ($colors.color7)\n"
+  | str replace --regex 'cursor .+\n' $"cursor ($colors.color7)\n"
+  | str replace --regex 'selection_background .+\n' $"selection_background ($colors.color3)\n"
+  | str replace --regex 'color0 .+\n' $"color0 ($colors.color0)\n"
+  | str replace --regex 'color8 .+\n' $"color8 ($colors.color8)\n"
+  | str replace --regex 'color1 .+\n' $"color1 ($colors.color1)\n"
+  | str replace --regex 'color9 .+\n' $"color9 ($colors.color9)\n"
+  | str replace --regex 'color2 .+\n' $"color2 ($colors.color2)\n"
+  | str replace --regex 'color10 .+\n' $"color10 ($colors.color10)\n"
+  | str replace --regex 'color3 .+\n' $"color3 ($colors.color3)\n"
+  | str replace --regex 'color11 .+\n' $"color11 ($colors.color11)\n"
+  | str replace --regex 'color4 .+\n' $"color4 ($colors.color4)\n"
+  | str replace --regex 'color12 .+\n' $"color12 ($colors.color12)\n"
+  | str replace --regex 'color5 .+\n' $"color5 ($colors.color5)\n"
+  | str replace --regex 'color13 .+\n' $"color13 ($colors.color13)\n"
+  | str replace --regex 'color6 .+\n' $"color6 ($colors.color6)\n"
+  | str replace --regex 'color14 .+\n' $"color14 ($colors.color14)\n"
+  | str replace --regex 'color7 .+\n' $"color7 ($colors.color7)\n"
+  | str replace --regex 'color15 .+\n' $"color15 ($colors.color15)\n"
+  | str replace --regex 'selection_foreground .+\n' $"selection_foreground ($colors.color0)\n"
+  | str replace --regex 'active_tab_foreground\s+.+\n' $"active_tab_foreground   ($colors.color15)\n"
+  | str replace --regex 'active_tab_background\s+.+\n' $"active_tab_background   ($colors.color4)\n"
+  | str replace --regex 'inactive_tab_foreground\s+.+\n' $"inactive_tab_foreground ($colors.color7)\n"
+  | str replace --regex 'inactive_tab_background\s+.+\n' $"inactive_tab_background ($colors.color0)\n"
+  | save -f ~/.config/kitty/current-theme.conf
+
 # Waybar
   let waybar_theme = $'/* Palette */
   @define-color rosewater    ($colors.color1);

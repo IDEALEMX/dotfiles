@@ -20,7 +20,7 @@
 
 # UI config
 ## Get shell colors
-cat ~/.cache/wal/sequences
+#cat ~/.cache/wal/sequences
 $env.config.show_banner = false
 $env.PROMPT_INDICATOR = "::󰘧 "
 
