@@ -1,10 +1,11 @@
 #!/bin/nu
 
 let pick = [
-  "clipboard-history"
-  "get-music"
   "pick-wallpaper"
+  "get-music"
+  "clipboard-history"
   "logout-menu"
+  "toggle-cava"
 ] | to txt | fuzzel --dmenu
 
 match $pick {
@@ -12,5 +13,6 @@ match $pick {
   "logout-menu" => ~/scripts/power
   "get-music" => ~/scripts/ytd
   "clipboard-history" => {cliphist list | fuzzel --dmenu | cliphist decode | wl-copy}
+  "toggle-cava" => {~/dotfiles/scripts/toggle-class cava-overlay}
 }
 

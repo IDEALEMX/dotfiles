@@ -1,2 +1,3 @@
-#!/bin/nu
-source $nu.config-path; rmpc
+#!/bin/bash
+cat ~/.cache/wal/sequences
+rmpc

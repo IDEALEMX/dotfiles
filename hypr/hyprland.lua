@@ -101,8 +101,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#ba6789ff",
-            inactive_border = "#150f22ff",
+            active_border = "#818181ff",
+            inactive_border = "#090404ff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -126,7 +126,7 @@ hl.config({
             enabled      = true,
             range        = 25,
             render_power = 25,
-            color = "#F98AB715",
+            color = "#ADADAD15",
         },
 
         blur = {
@@ -418,4 +418,30 @@ hl.layer_rule({
         namespace = "waybar",
     },
     order = 10,
+})
+
+hl.window_rule ({
+    match = {class = "^cava-overlay$"},
+    float = true,
+
+    pin = true,
+    no_initial_focus = true,
+    no_focus = true,
+
+    no_anim = true,
+    border_size = 0,
+    rounding = 0,
+
+    opacity = 0.5,
+    no_blur = true,
+
+    size = {
+        "(monitor_w)",
+        "(monitor_h * 0.05)",
+    },
+
+    move = {
+        0,
+        "(monitor_h - (monitor_h * 0.05))"
+    }
 })

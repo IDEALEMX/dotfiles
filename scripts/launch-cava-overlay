@@ -1,0 +1,2 @@
+#!/bin/bash
+kitty --class cava-overlay --config ~/.config/kitty/cava.conf cava

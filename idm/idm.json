@@ -15,7 +15,8 @@
             "mako" : {},
             "rmpc" : {},
             "rofi" : {},
-            "waybar" : {}
+            "waybar" : {},
+            "cava" : {}
         },
 
         "~/" : {

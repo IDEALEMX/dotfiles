@@ -4,7 +4,7 @@
   "blink.lib": { "branch": "main", "commit": "fd9a48ebbe6ec30d5dfcc5b42c243941ccdca1aa" },
   "follow-md-links.nvim": { "branch": "main", "commit": "99c4e7c78c0211e02c9ff282044b45f7b9dc2d0f" },
   "friendly-snippets": { "branch": "main", "commit": "b4d01b0fdf3c9a549961c2f9ffe8dc09be166219" },
-  "fzf-lua": { "branch": "main", "commit": "ed0e0ead1789ee349cbf025900931fb402b1e05e" },
+  "fzf-lua": { "branch": "main", "commit": "48d7c3db291a2c7c1825905c227a6bc81c83b837" },
   "guts.nvim": { "branch": "main", "commit": "e033ab8d594159d79c099764f8e7c63a733aa471" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "lazydev.nvim": { "branch": "main", "commit": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d" },

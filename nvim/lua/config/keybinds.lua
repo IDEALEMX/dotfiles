@@ -54,14 +54,6 @@ wk.add({
     {"<leader>ta", ":tabnew<CR>", desc = "Add", mode = "n"},
 })
 
--- Markdown
-wk.add({
-    {"<leader>m", group = "Markdown"},
-
-    {"<leader>mr", ":MdKite<CR>", desc = "Render markdown", mode = "n"},
-    {"<leader>mm", ":MdMath clear<CR>", desc = "Restart math render", mode = "n"},
-})
-
 -- Ui
 wk.add({
     {"<leader>u", group = "Ui"},

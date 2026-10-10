@@ -1,0 +1,14 @@
+#!/bin/nu
+
+def main [class_name: string] {
+  let pids = hyprctl clients -j
+  | from json
+  | where class == $class_name
+  | get pid
+
+  if ($pids | is-empty) {
+    bash -c $"~/dotfiles/scripts/launch-($class_name) &"
+  } else {
+    $pids | each {|pid| kill ($pid | into int)} | ignore
+  }
+}
