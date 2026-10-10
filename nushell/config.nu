@@ -30,6 +30,7 @@ alias tags = easytag ~/Music/
 
 # Add Tooling
 $env.path ++= ['/home/ideale/scripts/']
+$env.path ++= ['/home/ideale/scripts/fzf/']
 $env.path ++= ['/home/ideale/.local/bin/']
 
 let $ZK_NOTEBOOK_DIR = "~/notebook/"

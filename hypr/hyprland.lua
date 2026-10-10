@@ -101,8 +101,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#a85d61ff",
-            inactive_border = "#0b0404ff",
+            active_border = "#b8bcbeff",
+            inactive_border = "#1c3541ff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -126,7 +126,7 @@ hl.config({
             enabled      = true,
             range        = 25,
             render_power = 25,
-            color = "#E07D8215",
+            color = "#F6FBFE15",
         },
 
         blur = {
@@ -470,4 +470,18 @@ hl.window_rule ({
         "(monitor_w * 0.30)",
         -10
     }
+})
+
+hl.window_rule ({
+    match = {class = "^fzf-dmenu$"},
+    float = true,
+
+    pin = true,
+    stay_focused = true,
+
+    center = true,
+    size = {
+        "(monitor_w * 0.5)",
+        "(monitor_h * 0.5)",
+    },
 })

@@ -1,4 +1,0 @@
-#!/bin/nu
-def main [file] {
-  source $nu.config-path; nvim -c "cd ~/notebook/" $file
-}

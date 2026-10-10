@@ -18,7 +18,7 @@ let list = [
     "Shutdown"
 ]
 
-let selected = ($list | str join "\n" | fuzzel --dmenu)
+let selected = ($list | str join "\n" | ~/scripts/fzf/launch-fzf-dmenu)
 
 match $selected {
     "Lock" => { loginctl lock-session }

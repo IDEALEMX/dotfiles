@@ -1,0 +1,18 @@
+#!/bin/bash
+
+tmp=$(mktemp)
+trap 'rm -f "$tmp"' EXIT
+
+if [ -t 0 ]; then
+    kitty --class fzf-dmenu --config ~/.config/kitty/fzf-dmenu.conf \
+        sh -c '~/scripts/fzf/fzf-dmenu > "$1"' _ "$tmp"
+else
+    input=$(mktemp)
+    trap 'rm -f "$tmp" "$input"' EXIT
+    cat > "$input"
+
+    kitty --class fzf-dmenu --config ~/.config/kitty/fzf-dmenu.conf \
+        sh -c '~/scripts/fzf/fzf-dmenu < "$1" > "$2"' _ "$input" "$tmp"
+fi
+
+cat "$tmp"

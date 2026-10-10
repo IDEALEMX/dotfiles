@@ -7,7 +7,7 @@ let pick = [
   "logout-menu"
   "toggle-cava"
   "toggle-cbonsai"
-] | to txt | fuzzel --dmenu
+] | to txt | ~/scripts/fzf/launch-fzf-dmenu
 
 match $pick {
   "pick-wallpaper" => ~/scripts/wals

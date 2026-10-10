@@ -1,0 +1,16 @@
+#!/bin/bash
+export FZF_DEFAULT_OPTS="
+  --layout=reverse
+  --info=hidden
+  --margin=1
+  --color=fg:-1,bg:-1
+  --color=fg+:-1,bg+:-1
+  --color=border:6
+  --color=prompt:6,pointer:6,marker:5,gutter:-1
+  --color=hl:6,hl+:14
+  --color=spinner:13,info:8
+  --color=header:6,gutter:-1
+  --color=scrollbar:8
+"
+
+fzf --style full

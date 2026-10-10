@@ -5,5 +5,5 @@ let filename = $"/home/ideale/notebook/daily::($current_date).md"
 if not ($filename | path exists) {
   $"# DAILY ($current_date)\n\n- [ ] TODO: atomize" | save $filename
 }
-kitty --class kitty-float ~/scripts/nvim-launch $"($filename)"
+kitty --class kitty-float nvim -c "cd ~/notebook/" $"($filename)"
 

@@ -1,2 +1,2 @@
 #!/bin/nu
-kitty --class kitty-float ~/scripts/rmpc-launch
+kitty --class kitty-float rmpc
