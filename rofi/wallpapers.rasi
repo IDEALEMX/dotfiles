@@ -1,0 +1,46 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
+configuration {
+    font: "JetBrainsMono 22";
+    matching: "fuzzy";
+    show-icons: true;
+    dmenu {
+        display-name: "󰘧";
+    }
+}
+
+window {
+    width: 75%;
+    height: 75%;
+}
+
+* {
+    icon-size: 64px;
+}
+
+listview {
+    columns: 5;
+    lines: 3;
+    spacing: 18px;
+    layout: vertical;
+    flow: horizontal;
+    fixed-height: true;
+    fixed-columns: true;
+    dynamic: false;
+}
+
+element {
+    orientation: vertical;
+    padding: 12px;
+    spacing: 8px;
+}
+
+element-icon {
+    size: 256px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}

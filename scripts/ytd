@@ -1,10 +1,12 @@
 #!/bin/nu
 
-let search = fuzzel -d
-let video = ytfzf -LD $search
+let search = rofi -x11 -dmenu -normal-window -config ~/dotfiles/rofi/prompt.rasi -theme-str 'entry { placeholder: "Input Youtube search terms"; }'
+let videos = yt-dlp --flat-playlist --print "%(title)s [%(id)s]" $"ytsearch10:($search)" 
+let video = $videos | rofi -x11 -dmenu -normal-window -config ~/dotfiles/rofi/gmenu.rasi -theme-str 'entry { placeholder: "Select a video"; }'
 
 try {
-    $video | yt-dlp -x --audio-format mp3 --embed-metadata --embed-thumbnail -o "$HOME/Music/%(title)s.%(ext)s" $"ytsearch1:($in)"
+    let id = ($video | parse --regex '(?P<id>\[[^\]]+\])$' | get id.0 | str trim --char '[' | str trim --char ']')
+    yt-dlp -x --audio-format mp3 --embed-metadata --embed-thumbnail -o "$HOME/Music/%(title)s.%(ext)s" $"https://www.youtube.com/watch?v=($id)"
     notify-send $"Download successful!\nSearch: ($search)\nResult: ($video)"
 } catch {|e|
     notify-send $"($e.msg). ($e.details.code)"

@@ -5,7 +5,6 @@
     "paths" : {
         "~/.config/" : {
             "fastfetch" : {},
-            "fuzzel" : {},
             "hypr" : {},
             "idm" : {},
             "kitty" : {},

@@ -7,13 +7,13 @@ let pick = [
   "logout-menu"
   "toggle-cava"
   "toggle-cbonsai"
-] | to txt | ~/scripts/fzf/launch-fzf-dmenu
+] | to txt | rofi -dmenu -x11 -normal-window -config ~/dotfiles/rofi/gmenu.rasi
 
 match $pick {
   "pick-wallpaper" => ~/scripts/wals
   "logout-menu" => ~/scripts/power
   "get-music" => ~/scripts/ytd
-  "clipboard-history" => {cliphist list | ~/scripts/fzf/launch-fzf-dmenu | cliphist decode | wl-copy}
+  "clipboard-history" => {cliphist list | rofi -dmenu -x11 -normal-window -config ~/dotfiles/rofi/gmenu.rasi | cliphist decode | wl-copy}
   "toggle-cava" => {~/dotfiles/scripts/toggle-class cava-overlay}
   "toggle-cbonsai" => {~/dotfiles/scripts/toggle-class cbonsai-overlay}
 }

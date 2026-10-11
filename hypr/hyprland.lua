@@ -101,8 +101,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#9c9c9cff",
-            inactive_border = "#090404ff",
+            active_border = "#183fb3ff",
+            inactive_border = "#0b0b19ff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -126,7 +126,7 @@ hl.config({
             enabled      = true,
             range        = 25,
             render_power = 25,
-            color = "#D0D0D015",
+            color = "#2054EF15",
         },
 
         blur = {
@@ -273,7 +273,7 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -x11 -normal-window -show drun"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))    -- dwindle only
 
@@ -413,13 +413,6 @@ hl.window_rule({
     no_shadow = true,
 })
 
-hl.layer_rule({
-    match = {
-        namespace = "waybar",
-    },
-    order = 10,
-})
-
 hl.window_rule ({
     match = {class = "^cava-overlay$"},
     float = true,
@@ -485,3 +478,16 @@ hl.window_rule ({
         "(monitor_h * 0.5)",
     },
 })
+
+hl.window_rule({
+    match = {
+        class = "^Rofi$",
+    },
+    opacity = 0.85,
+    float = true,
+
+    pin = true,
+    stay_focused = true,
+    center = true,
+})
+

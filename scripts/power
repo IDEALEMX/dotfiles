@@ -18,7 +18,7 @@ let list = [
     "Shutdown"
 ]
 
-let selected = ($list | str join "\n" | ~/scripts/fzf/launch-fzf-dmenu)
+let selected = ($list | str join "\n" | rofi -x11 -dmenu -normal-window -config ~/dotfiles/rofi/gmenu.rasi)
 
 match $selected {
     "Lock" => { loginctl lock-session }

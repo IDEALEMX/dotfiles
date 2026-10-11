@@ -1,0 +1,17 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
+configuration {
+    font: "JetBrainsMono 22";
+    matching: "fuzzy";
+    dmenu {
+        display-name: "󰘧";
+    }
+}
+
+window {
+    width: 50%;
+}
+
+listview {
+    enabled: false;
+}
