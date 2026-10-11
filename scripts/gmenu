@@ -13,7 +13,7 @@ match $pick {
   "pick-wallpaper" => ~/scripts/wals
   "logout-menu" => ~/scripts/power
   "get-music" => ~/scripts/ytd
-  "clipboard-history" => {cliphist list | fuzzel --dmenu | cliphist decode | wl-copy}
+  "clipboard-history" => {cliphist list | ~/scripts/fzf/launch-fzf-dmenu | cliphist decode | wl-copy}
   "toggle-cava" => {~/dotfiles/scripts/toggle-class cava-overlay}
   "toggle-cbonsai" => {~/dotfiles/scripts/toggle-class cbonsai-overlay}
 }

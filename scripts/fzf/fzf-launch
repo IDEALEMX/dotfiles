@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+app=$(
+    find /usr/share/applications ~/.local/share/applications \
+        -type f -name '*.desktop' 2>/dev/null |
+    while IFS= read -r file; do
+        name=$(grep -m1 '^Name=' "$file" | cut -d= -f2-)
+        [[ -n "$name" ]] && printf '%s\t%s\n' "$name" "$file"
+    done |
+    sort -f |
+    fzf \
+        --prompt='' \
+        --no-info \
+        --no-separator \
+        --no-scrollbar \
+        --layout=reverse \
+        --border=none \
+        --padding=0,1 \
+        --color='bg:#000000,bg+:#220033,fg:#f1edff,fg+:#f1edff,hl:#cc99ff,hl+:#cc99ff,pointer:#9500ff,marker:#9500ff,prompt:#cc99ff' \
+        --with-nth=1 \
+        --delimiter=$'\t' |
+    cut -f2
+)
+
+[[ -n "$app" ]] || exit 0
+gtk-launch "$(basename "$app" .desktop)"
