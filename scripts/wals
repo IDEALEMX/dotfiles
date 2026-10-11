@@ -24,17 +24,6 @@ def set-wal [wal_path: path] {
 
   makoctl reload
 
-# Fuzzel
-  open --raw ~/.config/fuzzel/fuzzel.ini
-  | str replace --regex 'background=.*\n' $"background=($colors.color0 | str trim --char '#')ff\n"
-  | str replace --regex 'text=.*\n' $"text=($colors.color15 | str trim --char '#')ff\n"
-  | str replace --regex 'match=.*\n' $"match=($colors.color1 | str trim --char '#')ff\n"
-  | str replace --regex 'selection-match=.*\n' $"selection-match=($colors.color9 | str trim --char '#')ff\n"
-  | str replace --regex 'selection=.*\n' $"selection=($colors.color1 | str trim --char '#')ff\n"
-  | str replace --regex 'selection-text=.*\n' $"selection-text=($colors.color15 | str trim --char '#')ff\n"
-  | str replace --regex 'border=.*\n' $"border=($colors.color4 | str trim --char '#')ff\n"
-  | save -f ~/.config/fuzzel/fuzzel.ini
-
 # Cava (audio visualizer)
   open --raw ~/.config/cava/config
   | str replace --regex "foreground = '.*'\n" $"foreground = '($colors.color11)'\n"
