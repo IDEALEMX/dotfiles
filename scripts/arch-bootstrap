@@ -1,0 +1,44 @@
+#!/bin/nu
+
+# The following script is meant ot bootstrap my system into an arch distro, may
+# create one if I ever distro hop lol
+
+# ===UTILS===
+
+def ensure_installed [pkg_name] {
+  if (pacman -Q $pkg_name | is-empty) {
+    sudo pacman -S $pkg_name
+  }
+}
+
+# Begin by updating system
+sudo pacman -Syu
+
+# Generate dotfiles
+if not ("~/dotfiles" | path exists) {
+  git clone "https://github.com/IDEALEMX/dotfiles" "~/dotfiles/"
+}
+
+mkdir ~/git-clones/
+if not ("~/git-clones/idm/" | path exists) {
+  git clone "https://github.com/IDEALEMX/idm" "~/git-clones/idm/"
+  sudo link "~/git-clones/idm/idm" "/bin/idm"
+}
+
+# Sync configs
+idm sync
+
+# General applications
+ensure_installed "cava"
+ensure_installed "fastfetch"
+ensure_installed "hyprland"
+ensure_installed "kitty"
+ensure_installed "mako"
+ensure_installed "mpd"
+ensure_installed "nvim"
+ensure_installed "bat"
+ensure_installed "rmpc"
+ensure_installed "rofi"
+ensure_installed "waybar"
+ensure_installed "firefox"
+
