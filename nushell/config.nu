@@ -35,4 +35,24 @@ $env.path ++= ['/home/ideale/.local/bin/']
 
 let $ZK_NOTEBOOK_DIR = "~/notebook/"
 
+let quotes = [
+  "I use arch btw"
+
+  "Emacs cured my autism
+  @Emerald Mcs. et al., PhD"
+
+  "I love vim; I'm just as unproductive as before, but in a more efficient manner.
+  @mkultrasoldier"
+
+  "People don't quit Emacs, they just die at some point
+  @Emerald Mcs. et al., PhD"
+
+  "There are 5 games written in rust and 50 game engines
+  @Jester Hartman"
+
+  "There are 5 games written in rust and 50 game engines
+  @Jester Hartman"
+]
+
+cowsay -f tux ($quotes | shuffle | first)
 
