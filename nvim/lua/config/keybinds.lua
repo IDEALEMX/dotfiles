@@ -63,11 +63,6 @@ wk.add({
     end, desc = "Set pywal colorscheme", mode = "n"},
 })
 
-wk.add({
-    {"<leader>r", ":%s/", desc="Replace", mode = "n"},
-    {"<leader>r", ":s/", desc="Replace", mode = "v"},
-})
-
 -- Qol
 vim.keymap.set("n", "<Esc>", ":nohl<CR>", { desc="Remove highlights form previous search", silent = true })
 
