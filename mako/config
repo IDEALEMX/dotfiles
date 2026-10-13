@@ -1,10 +1,10 @@
 sort=-time
 layer=overlay
-background-color=#130c1c
+background-color=#11121c
 width=280
 height=1080
 border-size=2
-border-color=#83719d
+border-color=#76609f
 icons=0
 max-icon-size=64
 default-timeout=8000

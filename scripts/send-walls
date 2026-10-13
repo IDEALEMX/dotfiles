@@ -1,14 +1,19 @@
 #!/bin/nu
 
-let ssh_songs = ssh -p 8022 u0_a395@192.168.100.32 'ls /data/data/com.termux/files/home/storage/pictures/ | where type == file | get name | to txt' | lines | each {|el| $el | path basename}
+let remote = "u0_a395@192.168.100.32"
+let port = 8022
+let remote_dir = "~/storage/pictures/"
 
-let diff = ls ~/walls/ 
-    | where type == file 
-    | get name 
-    | each {|el| $el | path basename} 
-    | where {|el| not ($el in $ssh_songs)} 
-    | each {|base| $"($env.HOME)/Music/($base)"}
+let ssh_songs = ssh -p $port $remote 'ls ~/storage/pictures/' 
+    | lines
+
+let diff = ls ~/walls/
+    | where type == file
+    | get name
+    | each {|el| $el | path basename}
+    | where {|el| not ($el in $ssh_songs)}
+    | each {|base| $"($env.HOME)/walls/($base)"}
 
 if not ($diff | is-empty) {
-    scp -P 8022 ...$diff u0_a395@192.168.100.32:~/storage/pictures/
+    scp -P $port ...$diff $"($remote):($remote_dir)"
 }
