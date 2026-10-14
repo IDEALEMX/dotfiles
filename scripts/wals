@@ -105,6 +105,9 @@ def set-wal [wal_path: path] {
   @define-color fg_alt       alpha("(")@fg, 0.75(")");'
 
   $waybar_theme | save -f ~/.config/waybar/themes/pywal.css
+
+# Firefox
+  ~/.local/bin/pywalfox update
 }
 
 let img = (~/scripts/wal-picker | str trim)

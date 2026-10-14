@@ -1,2 +1,0 @@
-#!/bin/bash
-kitty --class cbonsai-overlay --config ~/.config/kitty/transparent.conf cbonsai -li

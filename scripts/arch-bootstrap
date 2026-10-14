@@ -25,6 +25,9 @@ if not ("~/git-clones/idm/" | path exists) {
   sudo link "~/git-clones/idm/idm" "/bin/idm"
 }
 
+# For encryption
+ensure_installed "age"
+
 # Sync configs
 idm sync
 
@@ -32,13 +35,52 @@ idm sync
 ensure_installed "cava"
 ensure_installed "fastfetch"
 ensure_installed "hyprland"
+  # Dependencies
+  ensure_installed "awww"
+  ensure_installed "wl-clipboard"
+  ensure_installed "cliphist"
+
 ensure_installed "kitty"
+  # Dependencies
+  ensure_installed "ttf-jetbrains-mono-nerd"
+  ensure_installed "ttf-jetbrains-mono"
+
 ensure_installed "mako"
 ensure_installed "mpd"
+  systemctl --user enable mpd.service
+
 ensure_installed "nvim"
+  # Dependencies
+  ensure_installed "yarn"
+  ensure_installed "fzf"
+
 ensure_installed "bat"
 ensure_installed "rmpc"
 ensure_installed "rofi"
 ensure_installed "waybar"
-ensure_installed "firefox"
+  # Configure
+  ~/dotfiles/waybar/install
 
+ensure_installed "firefox"
+ensure_installed "zsh"
+  mkdir ~/.local/state/zsh
+  mkdir ~/.cache/zsh
+  ensure_installed "zoxide"
+  ensure_installed "fd"
+  ensure_installed "eza"
+
+ensure_installed "cowsay"
+
+# Wal
+print "Wal must be installed manualy [WIP]"
+  # Dependencies
+  ensure_installed "imagemagick"
+  ensure_installed "python-pipx"
+  pipx install pywalfox
+  pywalfox install
+
+ensure_installed "zsh"
+
+ensure_installed "man"
+
+ensure_installed "yt-dlp"

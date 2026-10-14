@@ -15,7 +15,8 @@
             "rmpc" : {},
             "rofi" : {},
             "waybar" : {},
-            "cava" : {}
+            "cava" : {},
+            "zsh" : {}
         },
 
         "~/" : {
@@ -23,7 +24,8 @@
             "personal/notebook" : { 
                 "as" : "notebook", 
                 "alias" : "notebook" 
-            }
+            },
+            ".zshenv" : {}
         }
     }
 }

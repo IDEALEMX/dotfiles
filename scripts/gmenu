@@ -6,7 +6,6 @@ let pick = [
   "clipboard-history"
   "logout-menu"
   "toggle-cava"
-  "toggle-cbonsai"
 ] | to txt | rofi -dmenu -x11 -normal-window -config ~/dotfiles/rofi/gmenu.rasi
 
 match $pick {
@@ -15,6 +14,5 @@ match $pick {
   "get-music" => ~/scripts/ytd
   "clipboard-history" => {cliphist list | rofi -dmenu -x11 -normal-window -config ~/dotfiles/rofi/gmenu.rasi | cliphist decode | wl-copy}
   "toggle-cava" => {~/dotfiles/scripts/toggle-class cava-overlay}
-  "toggle-cbonsai" => {~/dotfiles/scripts/toggle-class cbonsai-overlay}
 }
 
