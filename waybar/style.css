@@ -4,18 +4,19 @@
  */
 * { all: initial; }
 
-@import "themes/pywal.css";
+@import "themes/catppuccin-mocha.css";
 
 * {
-	font-family: "GoogleSansCode Nerd Font";
-	font-size: 13px;
-	font-weight: 500;
+	font-family: "CascadiaCode";
+	font-size: 20px;
+	font-weight: 800;
 	color: @fg;
 }
 
 #waybar {
 	background-color: @shadow;
 }
+
 #waybar > box {
 	margin: 3px;
 	background-color: @bg_0;

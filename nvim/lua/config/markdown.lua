@@ -39,7 +39,7 @@ vim.g.colorize_markdown = function ()
     require("render-markdown").setup({
         heading = {
             backgrounds = foregrounds,
-            foregrounds = foregrounds,
+            --foregrounds = foregrounds,
             icons = { '󰴈 ', ' ', ' ', '󰝥 ', ' ', ' ' },
         },
         checkbox = {
@@ -51,3 +51,5 @@ vim.g.colorize_markdown = function ()
 end
 
 vim.g.colorize_markdown()
+vim.cmd.colorscheme('base16-catppuccin-mocha')
+

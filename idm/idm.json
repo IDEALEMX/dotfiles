@@ -5,7 +5,6 @@
     "paths" : {
         "~/.config/" : {
             "fastfetch" : {},
-            "hypr" : {},
             "idm" : {},
             "kitty" : {},
             "mpd" : {},
@@ -14,16 +13,17 @@
             "mako" : {},
             "rmpc" : {},
             "rofi" : {},
-            "waybar" : {},
             "cava" : {},
-            "zsh" : {}
+            "zsh" : {},
+            "mango" : {},
+            "waybar" : {}
         },
 
         "~/" : {
             "scripts" : {},
-            "personal/notebook" : { 
-                "as" : "notebook", 
-                "alias" : "notebook" 
+            "personal/notebook" : {
+                "as" : "notebook",
+                "alias" : "notebook"
             },
             ".zshenv" : {}
         }

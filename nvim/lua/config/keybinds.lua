@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
 
 local wk = require("which-key")
 
@@ -80,3 +79,5 @@ vim.keymap.set("n", "N", "Nzzzv", { desc="Prev and center"})
 
 -- Terminal
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { silent = true })
+
+vim.keymap.set("n", "N", "Nzzzv", { desc="Prev and center"})

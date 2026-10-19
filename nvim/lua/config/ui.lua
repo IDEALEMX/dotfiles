@@ -28,8 +28,14 @@ vim.o.smoothscroll = true
 -- Disable wraping
 vim.o.wrap = false
 
+-- Hide splash-screen
+vim.opt.shortmess:append("I")
+
 -- Cmdline
 vim.o.cmdheight = 0
+
+-- Status line
+vim.opt.laststatus = 0
 
 -- Visual feedback when yanking
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -41,6 +47,7 @@ callback = function ()
 
 -- Colors
 vim.o.termguicolors = true
+vim.cmd.colorscheme('base16-catppuccin-mocha')
 
 -- Save undo
 vim.o.undofile = true

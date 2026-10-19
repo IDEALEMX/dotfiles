@@ -1,7 +1,7 @@
 #!/bin/nu
 
 def set-wal [wal_path: path] {
-  wal --cols16 -n -i $wal_path --backend wal
+  ~/.local/bin/wal --cols16 -n -i $wal_path --backend wal
   awww img $wal_path --transition-type random --transition-fps 60 --transition-duration 2
 
   let colors = open ~/.cache/wal/colors.json | $in.colors

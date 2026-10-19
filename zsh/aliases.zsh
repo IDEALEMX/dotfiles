@@ -1,8 +1,8 @@
 #---BETTER LS---
-alias ls='eza --icons'
+alias ls='eza --icons always'
 alias ll='eza -lh --icons --git'
 alias la='eza -lah --icons --git'
-alias lt='eza --tree --icons'
+alias lt='eza --tree --icons always'
 
 # Resue ls completions for aleza
 compdef eza=ls

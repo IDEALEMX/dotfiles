@@ -1,4 +1,4 @@
-@import "~/.cache/wal/colors-rofi-dark"
+@import "~/dotfiles/rofi/cat.rasi"
 
 configuration {
     font: "JetBrainsMono 22";

@@ -16,13 +16,12 @@ sudo pacman -Syu
 
 # Generate dotfiles
 if not ("~/dotfiles" | path exists) {
-  git clone "https://github.com/IDEALEMX/dotfiles" "~/dotfiles/"
+  git clone "https://github.com/IDEALEMX/dotfiles" ("~/dotfiles/" | path expand)
 }
 
 mkdir ~/git-clones/
 if not ("~/git-clones/idm/" | path exists) {
-  git clone "https://github.com/IDEALEMX/idm" "~/git-clones/idm/"
-  sudo link "~/git-clones/idm/idm" "/bin/idm"
+  git clone "https://github.com/IDEALEMX/idm" ("~/git-clones/idm/" | path expand)
 }
 
 # For encryption
@@ -72,11 +71,11 @@ ensure_installed "zsh"
 ensure_installed "cowsay"
 
 # Wal
-print "Wal must be installed manualy [WIP]"
   # Dependencies
   ensure_installed "imagemagick"
   ensure_installed "python-pipx"
   pipx install pywalfox
+  pipx install pywal16
   pywalfox install
 
 ensure_installed "zsh"

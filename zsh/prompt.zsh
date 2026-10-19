@@ -1,1 +1,1 @@
-PROMPT='%F{cyan}%n@%F{green}%~%f%F{cyan}::λ%f '
+PROMPT='%F{blue}%n@%F{magenta}%~%F{magenta} %f '

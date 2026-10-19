@@ -6,7 +6,7 @@ let video = $videos | rofi -x11 -dmenu -normal-window -config ~/dotfiles/rofi/gm
 
 try {
     let id = ($video | parse --regex '(?P<id>\[[^\]]+\])$' | get id.0 | str trim --char '[' | str trim --char ']')
-    yt-dlp -x --audio-format mp3 --embed-metadata --embed-thumbnail -o "$HOME/Music/%(title)s.%(ext)s" $"https://www.youtube.com/watch?v=($id)"
+    yt-dlp -x --cookies-from-browser firefox --audio-format mp3 --embed-metadata --embed-thumbnail -o "$HOME/Music/%(title)s.%(ext)s" $"https://www.youtube.com/watch?v=($id)"
     notify-send $"Download successful!\nSearch: ($search)\nResult: ($video)"
 } catch {|e|
     notify-send $"($e.msg). ($e.details.code)"

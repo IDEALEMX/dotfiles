@@ -26,9 +26,6 @@ return {
           nu = {
             command = { "nu" },
           },
-          javascript = {
-            command = { "node" },
-          },
         },
       },
 
@@ -50,7 +47,7 @@ return {
       ignore_blank_lines = true,
     })
 
-    vim.keymap.set("n", "<leader>rp", "vip<leader>s", {remap = true})
-    vim.keymap.set("n", "<leader>rh", "<cmd>IronHide<cr>")
+    vim.keymap.set("n", "<leader>rp", "vip<leader>s", {remap = true, desc = "Send paragraph"})
+    vim.keymap.set("n", "<leader>rh", "<cmd>IronHide<cr>", {desc = "Hide repl"})
   end,
 }
