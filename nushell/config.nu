@@ -50,9 +50,6 @@ let quotes = [
   "There are 5 games written in rust and 50 game engines
   @Jester Hartman"
 
-  "There are 5 games written in rust and 50 game engines
-  @Jester Hartman"
-
   "GNU is bloat
   @MentalOutlaw"
 ]

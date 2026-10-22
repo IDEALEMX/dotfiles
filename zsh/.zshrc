@@ -46,3 +46,6 @@ source "$ZDOTDIR/prompt.zsh"
 
 #---BAT COLORSCHEME---
 export BAT_THEME="ansi"
+
+#---GET CUTE QUOTE---
+~/scripts/quote

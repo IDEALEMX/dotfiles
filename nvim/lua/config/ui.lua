@@ -118,4 +118,4 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 })
 
 -- Which key ui tweaks
-vim.api.nvim_set_hl(0, "WhichKeyIcon", { underline = false })
+--vim.api.nvim_set_hl(0, "WhichKeyIcon", { underline = false })

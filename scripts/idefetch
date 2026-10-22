@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+# Data
+INFO_DUMP=$(hostnamectl)
+OS="UNKNOWN"
+if [[ $INFO_DUMP =~ Operating\ System:\ ([^$'\n']*) ]]; then
+    OS="${BASH_REMATCH[1]}"
+fi
+
+USER=$(whoami)
+
+HOST="UNKNOWN"
+if [[ $INFO_DUMP =~ Static\ hostname:\ ([^$'\n']*) ]]; then
+    HOST="${BASH_REMATCH[1]}"
+fi
+
+BATTERY="UNKNOWN"
+if [[ $(acpi) =~ ,\ (.*)% ]]; then
+    BATTERY="${BASH_REMATCH[1]}"
+fi
+
+# Find the longest value
+for VAR in "$OS" "$USER" "$HOST"; do
+    (( ${#VAR} > WIDTH )) && WIDTH=${#VAR}
+done
+
+# Generate the horizontal line
+LINE=$(printf '%*s' "$((WIDTH + 8))" '')
+LINE=${LINE// /─}
+
+# Print the box
+printf '╭%s╮\n' "$LINE"
+printf '│ OS:   %-*s │\n' "$WIDTH" "$OS"
+printf '│ HOST: %-*s │\n' "$WIDTH" "$HOST"
+printf '│ USER: %-*s │\n' "$WIDTH" "$USER"
+printf '│ BAT:  %-*s │\n' "$WIDTH" "$BATTERY%"
+printf '╰%s╯\n' "$LINE"
