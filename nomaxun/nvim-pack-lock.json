@@ -1,0 +1,44 @@
+{
+  "plugins": {
+    "base16-nvim": {
+      "rev": "7183774e90841f4bd27a47cb6e75cf532fd1192d",
+      "src": "https://github.com/RRethy/base16-nvim"
+    },
+    "base16.nvim": {
+      "rev": "b356e8701abf374b22cf0a13e0c36c07d4b43373",
+      "src": "https://github.com/Soares/base16.nvim"
+    },
+    "fine-cmdline.nvim": {
+      "rev": "6e646f4da6afe856e36f3d952489b723d1475638",
+      "src": "https://github.com/VonHeikemen/fine-cmdline.nvim"
+    },
+    "fzf-lua": {
+      "rev": "5dca84ef44f37b960a128a43d044ee348ff86fb4",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "hydra.nvim": {
+      "rev": "8c4a9f621ec7cdc30411a1f3b6d5eebb12b469dc",
+      "src": "https://github.com/nvimtools/hydra.nvim"
+    },
+    "noice.nvim": {
+      "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
+      "src": "https://github.com/folke/noice.nvim"
+    },
+    "nui.nvim": {
+      "rev": "10fc361835c856ba4233ef5ea135b919bf3dce97",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
+    "nvim-notify": {
+      "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
+      "src": "https://github.com/rcarriga/nvim-notify"
+    },
+    "snacks.nvim": {
+      "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
+      "src": "https://github.com/folke/snacks.nvim"
+    },
+    "which-key.nvim": {
+      "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
+      "src": "https://github.com/folke/which-key.nvim"
+    }
+  }
+}
