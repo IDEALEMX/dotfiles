@@ -1,35 +1,44 @@
 #!/usr/bin/nu
 
 let quotes = [
-  "I use arch btw
+  "I use arch btw.
   @Unknown"
 
-  "Emacs cured my autism
+  "Emacs cured my autism.
   @Emerald Mcs. et al., PhD"
 
   "I love vim; I'm just as unproductive as before, but in a more efficient manner.
   @mkultrasoldier"
 
-  "People don't quit Emacs, they just die at some point
+  "People don't quit Emacs, they just die at some point.
   @Emerald Mcs. et al., PhD"
 
-  "There are 5 games written in rust and 50 game engines
+  "There are 5 games written in rust and 50 game engines.
   @Jester Hartman"
 
-  "GNU is bloat
+  "// sometimes I believe compiler ignores all my comments
+  @Unknown"
+
+  "GNU is bloat.
   @MentalOutlaw"
 
-  "The bootloader is bloat if you never restart
+  "The bootloader is bloat if you never restart.
   @Average Debian user"
 
-  "I think therefore, I'm unemployed
+  "I think therefore, I'm unemployed.
   @Angiequeue"
 
-  "What is school? Right? We should learn Vim
+  "What is school? Right? We should learn Vim.
   @Veyron Mustan"
 
   "That's a nice watch you've got there, want me to turn it into a web server?
   @Richie Guix"
+
+  "I can’t go to a restaurant and order food because I keep looking at the fonts on the menu.
+  @Donald Knuth"
+
+  "I define UNIX as 30 definitions of regular expressions living under one roof.
+  @Donald Knuth"
 ]
 
 cowsay -f tux ($quotes | shuffle | first)

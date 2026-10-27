@@ -30,7 +30,8 @@ wk.add({
     }},
 
     { root .. 'w', function()
-        vim.cmd.bdetele()
+        vim.cmd.w()
+        wk.show(root)
     end, desc = ' Write', icon = {
         icon = "󱚍",
         color = "azure"
@@ -39,5 +40,12 @@ wk.add({
     { root .. 'f', function()
         require('fzf-lua').buffers()
     end, desc = 'Fzf'},
+
+    { root .. 'W', function()
+        wk.show("<leader>w")
+    end, desc = ' Windows', icon = {
+        icon = "",
+        color = "azure"
+    }},
 })
 

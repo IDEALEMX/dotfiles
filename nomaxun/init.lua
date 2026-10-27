@@ -9,8 +9,11 @@ vim.pack.add({
 
 require("gb.ui")
 require("gb.behaviour")
+require("gb.lib")
 
+----< GLOBAL MODULES >----
 require("modules.buffers")
+require("modules.windows")
 
 -- To be deleted
 local wk = require("which-key")
