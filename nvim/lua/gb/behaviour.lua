@@ -27,3 +27,8 @@ vim.opt.clipboard = "unnamedplus"
 
 ----< Leader key >----
 vim.g.mapleader = " "
+
+----< Undo files >----
+vim.o.undofile = true
+vim.o.swapfile = false
+vim.o.backup = false

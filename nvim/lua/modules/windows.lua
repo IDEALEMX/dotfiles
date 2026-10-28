@@ -37,10 +37,10 @@ wk.add({
         color = "azure"
     }},
 
-    { root .. 'B', function()
+    { root .. '<tab>', function()
         wk.show("<leader>b")
-    end, desc = ' Buffers', icon = {
-        icon = "",
+    end, desc = 'Buffers', icon = {
+        icon = "󰂺",
         color = "azure"
     }},
 
@@ -49,6 +49,39 @@ wk.add({
         wk.show(root)
     end, desc = ' Kill', icon = {
         icon = "󱐘",
+        color = "azure"
+    }},
+
+    -- move
+    { root .. 'L', function()
+        vim.g.run("<C-w>3>")
+        wk.show(root)
+    end, desc = ' Right', icon = {
+        icon = "󰧸",
+        color = "azure"
+    }},
+
+    { root .. 'H', function()
+        vim.g.run("<C-w>3<")
+        wk.show(root)
+    end, desc = ' Left', icon = {
+        icon = "󰧸",
+        color = "azure"
+    }},
+
+    { root .. 'K', function()
+        vim.g.run("<C-w>3+")
+        wk.show(root)
+    end, desc = ' Up', icon = {
+        icon = "󰧸",
+        color = "azure"
+    }},
+
+    { root .. 'J', function()
+        vim.g.run("<C-w>3-")
+        wk.show(root)
+    end, desc = ' Down', icon = {
+        icon = "󰧸",
         color = "azure"
     }},
 })

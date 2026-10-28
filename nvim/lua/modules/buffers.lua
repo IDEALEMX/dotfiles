@@ -1,3 +1,5 @@
+vim.pack.add({"https://github.com/famiu/bufdelete.nvim"})
+
 local wk = require("which-key")
 
 local root = '<leader>b'
@@ -22,7 +24,9 @@ wk.add({
     }},
 
     { root .. 'k', function()
-        vim.cmd('bdelete')
+        --> Kills the buffer without 
+        --> closing the window
+        vim.cmd('Bdelete')
         wk.show(root)
     end, desc = ' Kill', icon = {
         icon = "󰪗",
@@ -41,10 +45,10 @@ wk.add({
         require('fzf-lua').buffers()
     end, desc = 'Fzf'},
 
-    { root .. 'W', function()
+    { root .. '<tab>', function()
         wk.show("<leader>w")
-    end, desc = ' Windows', icon = {
-        icon = "",
+    end, desc = 'Windows', icon = {
+        icon = "󰋩",
         color = "azure"
     }},
 })

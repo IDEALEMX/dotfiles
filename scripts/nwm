@@ -1,0 +1,4 @@
+#!/bin/bash
+Xwayland :99 -noreset&
+env -u WAYLAND_DISPLAY DISPLAY=:99 kitty -c ~/dotfiles/kitty/kitty.conf -o placement_strategy=top-left -e nvim -c 'lua require("nxwm").start()'
+jobs -p | xargs kill
