@@ -3,26 +3,6 @@ vim.pack.add({
     'https://github.com/nvim-lualine/lualine.nvim'
 })
 
-vim.pack.add({
-  {
-    src = 'https://github.com/justinhj/battery.nvim',
-    version = 'main',
-  },
-})
-
-require('battery').setup({
-  update_rate_seconds = 60,
-  show_status_when_no_battery = false,
-  show_plugged_icon = true,
-  show_unplugged_icon = false,
-  show_percent = true,
-  vertical_icons = true,
-  multiple_battery_selection = 1,
-  notify_on_low_battery = true,
-  low_battery_threshold = 20,
-  critical_battery_threshold = 10,
-})
-
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -56,18 +36,14 @@ require('lualine').setup {
       },
     }
   },
-    sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename' },
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
-        lualine_y = { function()
-            return "󰥔 " .. os.date("%R")
-        end, },
-        lualine_z = { function()
-            return require("battery").get_status_line()
-        end }
-    },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},

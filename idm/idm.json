@@ -17,7 +17,6 @@
             "zsh" : {},
             "mango" : {},
             "waybar" : {},
-            "emacs" : {}
         },
 
         "~/" : {
@@ -26,6 +25,12 @@
                 "as" : "notebook",
                 "alias" : "notebook"
             },
+
+            "personal/org" : {
+                "as" : "org",
+                "alias" : "org"
+            },
+
             ".zshenv" : {}
         }
     }

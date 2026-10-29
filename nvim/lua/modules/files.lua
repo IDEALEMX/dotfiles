@@ -15,9 +15,18 @@ wk.add({
         color = "azure"
     }},
 
-    { root .. 'e', ':e .<CR>', desc = 'Explorer', icon = {
-        icon = "󰥨",
+    { root .. 'g', ':FzfLua live_grep<CR>', desc = 'Grep', icon = {
+        icon = "󰦄",
+        color = "azure"
+    }},
+
+    { root .. 'r', ':FzfLua history<CR>', desc = 'Recent', icon = {
+        icon = "󰥌",
+        color = "azure"
+    }},
+
+    { root .. 'o', ':Oil<CR>', desc = 'Oil', icon = {
+        icon = "󰼙",
         color = "azure"
     }},
 })
-
