@@ -28,3 +28,6 @@ callback = function ()
     vim.hl.on_yank()
     end
 })
+
+----< Set fzf-lua as default selector >----
+require("fzf-lua").register_ui_select()
