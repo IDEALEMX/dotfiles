@@ -50,8 +50,10 @@ local menu        = "fuzzel"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
-   hl.exec_cmd("~/scripts/nwm")
+   hl.exec_cmd(terminal)
+   hl.exec_cmd("firefox")
    hl.exec_cmd("nm-applet")
+   hl.exec_cmd("waybar")
    hl.exec_cmd("awww-daemon")
    hl.exec_cmd("wl-paste --watch cliphist store")
    hl.exec_cmd("wl-paste --type image --watch cliphist store")
@@ -93,14 +95,14 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 0,
-        gaps_out = 0,
+        gaps_in  = 3,
+        gaps_out = 6,
 
-        border_size = 0,
+        border_size = 2,
 
         col = {
-            active_border = "#ba6789ff",
-            inactive_border = "#150f22ff",
+            active_border = "#76609fff",
+            inactive_border = "#11121cff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -113,18 +115,18 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 0,
-        rounding_power = 0,
+        rounding       = 25,
+        rounding_power = 1,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 0.95,
         inactive_opacity = 0.85,
 
         shadow = {
-            enabled      = false,
+            enabled      = true,
             range        = 25,
             render_power = 25,
-            color = "#F98AB715",
+            color = "#9E81D515",
         },
 
         blur = {
@@ -263,10 +265,44 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("~/scripts/nwm"))
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("firefox"))
 
+
+local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -x11 -normal-window -show drun"))
+hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))    -- dwindle only
+
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("~/scripts/gmenu"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("~/scripts/kitty-music"))
+
+-- Move focus with mainMod + arrow keys
+hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+-- Move focus with vim keybinds
+hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
+
+-- Resize window
+hl.bind(mainMod .. " + SHIFT + L ", hl.dsp.window.resize({ x = 30, y = 0, relative = true }))
+hl.bind(mainMod .. " + SHIFT + H ", hl.dsp.window.resize({ x = -30, y = 0, relative = true }))
+hl.bind(mainMod .. " + SHIFT + K ", hl.dsp.window.resize({ x = 0, y = -30, relative = true }))
+hl.bind(mainMod .. " + SHIFT + J ", hl.dsp.window.resize({ x = 0, y = 30, relative = true }))
+
+hl.bind(mainMod .. " + CONTROL + L ", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + CONTROL + H ", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + CONTROL + K ", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + CONTROL + J ", hl.dsp.window.move({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]

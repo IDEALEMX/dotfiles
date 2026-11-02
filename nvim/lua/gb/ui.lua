@@ -19,7 +19,8 @@ vim.o.cmdheight = 0
 ----< Colorscheme >----
 vim.o.termguicolors = true
 vim.pack.add({ "https://github.com/RRethy/base16-nvim" })
-vim.cmd.colorscheme('base16-catppuccin-mocha')
+vim.pack.add({ "https://github.com/OverLessski/pywal16.nvim" })
+vim.cmd.colorscheme('pywal16')
 
 ----< Visual feedback when yanking >----
 vim.api.nvim_create_autocmd("TextYankPost", {

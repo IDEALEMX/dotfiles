@@ -1,6 +1,6 @@
 #!/bin/nu
 
-let ssh_songs = ssh -p 8022 u0_a395@192.168.100.32 'ls /data/data/com.termux/files/home/storage/music/ | where type == file | get name | to txt' | lines | each {|el| $el | path basename}
+let ssh_songs = ssh -p 8022 u0_a395@192.168.100.46 'ls /data/data/com.termux/files/home/storage/music/ | where type == file | get name | to txt' | lines | each {|el| $el | path basename}
 
 let diff = ls ~/Music/ 
     | where type == file 
@@ -10,5 +10,5 @@ let diff = ls ~/Music/
     | each {|base| $"($env.HOME)/Music/($base)"}
 
 if not ($diff | is-empty) {
-    scp -P 8022 ...$diff u0_a395@192.168.100.32:~/storage/music/
+    scp -P 8022 ...$diff u0_a395@192.168.100.46:~/storage/music/
 }

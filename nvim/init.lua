@@ -7,20 +7,6 @@ vim.pack.add({
     { src = "https://github.com/nvim-treesitter/nvim-treesitter.git"}
 })
 
-vim.api.nvim_create_autocmd("User", {
-  pattern = "TSUpdate",
-  callback = function()
-    require("nvim-treesitter.parsers").org = {
-      install_info = {
-        url = "https://github.com/milisims/tree-sitter-org",
-        revision = "main",
-        files = { "src/parser.c", "src/scanner.c" },
-      },
-      filetype = "org",
-    }
-  end,
-})
-
 require("gb.ui")
 require("gb.behaviour")
 require("gb.lib")
@@ -38,3 +24,4 @@ require("modules.neogit")
 
 require("filetypes.lua")
 require("filetypes.org")
+require("filetypes.rust")

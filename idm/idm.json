@@ -16,7 +16,7 @@
             "cava" : {},
             "zsh" : {},
             "mango" : {},
-            "waybar" : {},
+            "waybar" : {}
         },
 
         "~/" : {

@@ -89,6 +89,14 @@
       "rev": "ab56d1759fb3215c4be9a0587de1ad69e9a29c5f",
       "src": "https://github.com/xheisenbugx/org.nvim"
     },
+    "pywal.nvim": {
+      "rev": "d11b673c0e3d6eb8cbee7ea8cf4a8911f6ee24b9",
+      "src": "https://github.com/AlphaTechnolog/pywal.nvim"
+    },
+    "pywal16.nvim": {
+      "rev": "6210a13976d2fce09b5b1022944e8573e04d6d02",
+      "src": "https://github.com/OverLessski/pywal16.nvim"
+    },
     "render-latex.nvim": {
       "rev": "129bce432c822300ad8b0c5f573fcf4ef42d4e52",
       "src": "https://github.com/techwizrd/render-latex.nvim"

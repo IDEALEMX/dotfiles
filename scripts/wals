@@ -29,6 +29,32 @@ def set-wal [wal_path: path] {
   | str replace --regex "foreground = '.*'\n" $"foreground = '($colors.color11)'\n"
   | save -f ~/.config/cava/config
 
+# Rofi
+  open --raw ~/.config/rofi/cat.rasi
+  | str replace --regex 'background: .*;' $"background: ($colors.color0);"
+  | str replace --regex 'foreground: .*;' $"foreground: ($colors.color7);"
+  | str replace --regex 'border-color: .*;' $"border-color: ($colors.color8);"
+  | str replace --regex 'active-background: .*;' $"active-background: ($colors.color0);"
+  | str replace --regex 'active-foreground: .*;' $"active-foreground: ($colors.color7);"
+  | str replace --regex 'normal-background: .*;' $"normal-background: ($colors.color0);"
+  | str replace --regex 'normal-foreground: .*;' $"normal-foreground: ($colors.color7);"
+  | str replace --regex 'urgent-background: .*;' $"urgent-background: ($colors.color1);"
+  | str replace --regex 'urgent-foreground: .*;' $"urgent-foreground: ($colors.color7);"
+  | str replace --regex 'alternate-active-background: .*;' $"alternate-active-background: ($colors.color0);"
+  | str replace --regex 'alternate-active-foreground: .*;' $"alternate-active-foreground: ($colors.color7);"
+  | str replace --regex 'alternate-normal-background: .*;' $"alternate-normal-background: ($colors.color0);"
+  | str replace --regex 'alternate-normal-foreground: .*;' $"alternate-normal-foreground: ($colors.color7);"
+  | str replace --regex 'alternate-urgent-background: .*;' $"alternate-urgent-background: ($colors.color0);"
+  | str replace --regex 'alternate-urgent-foreground: .*;' $"alternate-urgent-foreground: ($colors.color7);"
+  | str replace --regex 'selected-active-background: .*;' $"selected-active-background: ($colors.color4);"
+  | str replace --regex 'selected-active-foreground: .*;' $"selected-active-foreground: ($colors.color0);"
+  | str replace --regex 'selected-normal-background: .*;' $"selected-normal-background: ($colors.color4);"
+  | str replace --regex 'selected-normal-foreground: .*;' $"selected-normal-foreground: ($colors.color15);"
+  | str replace --regex 'selected-urgent-background: .*;' $"selected-urgent-background: ($colors.color1);"
+  | str replace --regex 'selected-urgent-foreground: .*;' $"selected-urgent-foreground: ($colors.color0);"
+  | str replace --regex 'background-color: .*;' $"background-color: ($colors.color0);"
+  | save -f ~/.config/rofi/cat.rasi
+
 # Kitty
   open --raw ~/.config/kitty/current-theme.conf
   | str replace --regex 'background .+\n' $"background ($colors.color0)\n"
