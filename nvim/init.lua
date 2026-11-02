@@ -7,8 +7,8 @@ vim.pack.add({
     { src = "https://github.com/nvim-treesitter/nvim-treesitter.git"}
 })
 
-require("gb.ui")
 require("gb.behaviour")
+require("gb.ui")
 require("gb.lib")
 
 ----< GLOBAL MODULES >----

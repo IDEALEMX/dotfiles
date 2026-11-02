@@ -4,14 +4,9 @@
       "rev": "7183774e90841f4bd27a47cb6e75cf532fd1192d",
       "src": "https://github.com/RRethy/base16-nvim"
     },
-    "base16.nvim": {
-      "rev": "b356e8701abf374b22cf0a13e0c36c07d4b43373",
-      "src": "https://github.com/Soares/base16.nvim"
-    },
     "battery.nvim": {
       "rev": "3155cd8ac881e959b5d494b17c613e9df8790576",
-      "src": "https://github.com/justinhj/battery.nvim",
-      "version": "'main'"
+      "src": "https://github.com/justinhj/battery.nvim"
     },
     "blink.cmp": {
       "rev": "74ebcf9a2daffd3d2eaaf13fa384c5caf337056e",
@@ -88,10 +83,6 @@
     "org.nvim": {
       "rev": "ab56d1759fb3215c4be9a0587de1ad69e9a29c5f",
       "src": "https://github.com/xheisenbugx/org.nvim"
-    },
-    "pywal.nvim": {
-      "rev": "d11b673c0e3d6eb8cbee7ea8cf4a8911f6ee24b9",
-      "src": "https://github.com/AlphaTechnolog/pywal.nvim"
     },
     "pywal16.nvim": {
       "rev": "6210a13976d2fce09b5b1022944e8573e04d6d02",
