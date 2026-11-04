@@ -57,6 +57,7 @@ hl.on("hyprland.start", function()
    hl.exec_cmd("awww-daemon")
    hl.exec_cmd("wl-paste --watch cliphist store")
    hl.exec_cmd("wl-paste --type image --watch cliphist store")
+   hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 end)
 
 -------------------------------
@@ -101,8 +102,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#9c9c9dff",
-            inactive_border = "#1b0c0cff",
+            active_border = "#a97b99ff",
+            inactive_border = "#0c0505ff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -126,7 +127,7 @@ hl.config({
             enabled      = true,
             range        = 25,
             render_power = 25,
-            color = "#D1D1D215",
+            color = "#E2A4CD15",
         },
 
         blur = {
