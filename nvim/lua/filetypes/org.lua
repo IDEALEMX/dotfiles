@@ -10,7 +10,7 @@ local wk = require("which-key")
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "org",
   callback = function()
-      require("modules.spellcheck")
+      require("modules.spellcheck").enable()
       vim.pack.add({
           "https://github.com/techwizrd/render-latex.nvim",
       })

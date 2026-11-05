@@ -17,19 +17,18 @@
             "zsh" : {},
             "mango" : {},
             "waybar" : {},
-            "swappy" : {}
+            "swappy" : {},
+            "mytio" : {}
         },
 
         "~/" : {
             "scripts" : {},
-            "personal/notebook" : {
-                "as" : "notebook",
-                "alias" : "notebook"
+            "notebook" : {
+                "from" : "personal/notebook"
             },
 
-            "personal/org" : {
-                "as" : "org",
-                "alias" : "org"
+            "org" : {
+                "from" : "personal/org"
             },
 
             ".zshenv" : {}
