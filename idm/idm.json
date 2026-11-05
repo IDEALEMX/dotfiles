@@ -17,8 +17,7 @@
             "zsh" : {},
             "mango" : {},
             "waybar" : {},
-            "swappy" : {},
-            "mytio" : {}
+            "swappy" : {}
         },
 
         "~/" : {
