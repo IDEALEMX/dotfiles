@@ -1,6 +1,6 @@
 {
     "dotfile-path" : "~/dotfiles/",
-    "run-pre-gpush" : "~/scripts/wals",
+    "run-pre-gpush" : "~/dotfiles/scripts/encrypt-personal",
 
     "paths" : {
         "~/.config/" : {
