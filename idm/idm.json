@@ -1,7 +1,6 @@
 {
     "dotfile-path" : "~/dotfiles/",
-    "run-pre-gpush" : "~/dotfiles/scripts/encrypt-personal",
-    "run-post-gpush" : "~/dotfiles/scripts/power",
+    "run-pre-gpush" : "echo 'hello world!'",
 
     "paths" : {
         "~/.config/" : {
