@@ -8,7 +8,7 @@
             "idm" : {},
             "kitty" : {},
             "mpd" : {},
-            "nushell" : { "alias" : "nu" },
+            "nushell" : {},
             "nvim" : {},
             "mako" : {},
             "rmpc" : {},
@@ -22,15 +22,13 @@
 
         "~/" : {
             "scripts" : {},
+            ".zshenv" : {},
             "notebook" : {
                 "from" : "personal/notebook"
             },
-
             "org" : {
                 "from" : "personal/org"
-            },
-
-            ".zshenv" : {}
+            }
         }
     }
 }
