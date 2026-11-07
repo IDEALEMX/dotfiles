@@ -23,6 +23,9 @@
         "~/" : {
             "scripts" : {},
             ".zshenv" : {},
+            ".tmux.conf" : {
+                "from" : "tmux.conf"
+            },
             "notebook" : {
                 "from" : "personal/notebook"
             },
