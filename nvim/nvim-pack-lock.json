@@ -52,6 +52,11 @@
       "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",
       "src": "https://github.com/mason-org/mason.nvim.git"
     },
+    "neo-tree.nvim": {
+      "rev": "bb9779f532ef9ec62486a840fb5db44591aeff0f",
+      "src": "https://github.com/nvim-neo-tree/neo-tree.nvim",
+      "version": "3.0.0 - 4.0.0"
+    },
     "neogit": {
       "rev": "697ad3ee86a73cf6b6758b838d7a7d76cf3b9f86",
       "src": "https://github.com/NeogitOrg/neogit"
@@ -87,6 +92,10 @@
     "org.nvim": {
       "rev": "ab56d1759fb3215c4be9a0587de1ad69e9a29c5f",
       "src": "https://github.com/xheisenbugx/org.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "pywal16.nvim": {
       "rev": "6210a13976d2fce09b5b1022944e8573e04d6d02",

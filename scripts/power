@@ -10,9 +10,9 @@
 # License: MIT
 
 let list = [
-    "Lock"
     "Logout"
     "Suspend"
+    "Lock"
     "Hibernate"
     "Reboot"
     "Shutdown"

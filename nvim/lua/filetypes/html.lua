@@ -16,5 +16,13 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "html",
   callback = function()
       require("modules.spellcheck").enable()
+      local root = '<leader>l'
+      wk.add({
+          { root, group = 'Local' },
+          { root .. 'q', '', desc = 'Quit'},
+
+          --> Attribute
+          { root .. 'a', 'f>i ', desc = '<|>'},
+  })
   end,
 })

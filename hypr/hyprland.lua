@@ -102,8 +102,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#b49987ff",
-            inactive_border = "#190a0aff",
+            active_border = "#9c9c9dff",
+            inactive_border = "#1b0c0cff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -127,7 +127,7 @@ hl.config({
             enabled      = true,
             range        = 50,
             render_power = 4,
-            color = "#F0CDB515",
+            color = "#D1D1D215",
         },
 
         blur = {
@@ -272,7 +272,7 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("firefox"))
 
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
-hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("~/scripts/power"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -x11 -normal-window -show drun"))

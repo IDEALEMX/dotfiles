@@ -32,6 +32,10 @@
             "org" : {
                 "from" : "personal/org"
             }
+        },
+
+        "/etc/" : {
+            "ly" : {}
         }
     }
 }
