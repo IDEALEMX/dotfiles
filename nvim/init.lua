@@ -13,7 +13,7 @@ require("gb.lib")
 
 ----< GLOBAL MODULES >----
 require("modules.buffers")
-require("modules.windows")
+--require("modules.windows")
 require("modules.lualine")
 require("modules.lsp")
 require("modules.oil")
