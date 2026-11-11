@@ -70,8 +70,8 @@ require("oil").setup {
 
         -- Selections
         ["<CR>"] = "actions.select",
-        ["<C-s>"] = { "actions.select", opts = { vertical = true } },
-        ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
+        -- ["<C-v>"] = { "actions.select", opts = { vertical = true } },
+        -- ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
         --["<C-t>"] = { "actions.select", opts = { tab = true } },
 
         ["<C-p>"] = "actions.preview",

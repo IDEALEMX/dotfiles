@@ -102,8 +102,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#9c9c9dff",
-            inactive_border = "#1b0c0cff",
+            active_border = "#ac0909ff",
+            inactive_border = "#0b0505ff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -127,7 +127,7 @@ hl.config({
             enabled      = true,
             range        = 50,
             render_power = 4,
-            color = "#D1D1D215",
+            color = "#E60C0C15",
         },
 
         blur = {

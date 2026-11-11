@@ -38,7 +38,7 @@ fi
 
 # ---Modular config files---
 
-source "$ZDOTDIR/fzf.zsh"
+# source "$ZDOTDIR/fzf.zsh"
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/bindings.zsh"
 source "$ZDOTDIR/plugins.zsh"
@@ -48,4 +48,4 @@ source "$ZDOTDIR/prompt.zsh"
 export BAT_THEME="ansi"
 
 #---GET CUTE QUOTE---
-~/scripts/quote
+#~/scripts/quote
