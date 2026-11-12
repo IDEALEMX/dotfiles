@@ -14,7 +14,6 @@
             "rmpc" : {},
             "rofi" : {},
             "cava" : {},
-            "zsh" : {},
             "mango" : {},
             "waybar" : {},
             "swappy" : {}
@@ -22,7 +21,6 @@
 
         "~/" : {
             "scripts" : {},
-            ".zshenv" : {},
             ".tmux.conf" : {
                 "from" : "tmux.conf"
             },

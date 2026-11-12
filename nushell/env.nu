@@ -16,3 +16,10 @@
 #
 # You can remove these comments if you want or leave
 # them for future reference.
+
+$env.config.show_banner = false
+$env.PROMPT_INDICATOR = "::󰘧 "
+
+$env.path ++= ['/home/ideale/scripts/']
+$env.path ++= ['/home/ideale/scripts/fzf/']
+$env.path ++= ['/home/ideale/.local/bin/']

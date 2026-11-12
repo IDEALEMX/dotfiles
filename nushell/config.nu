@@ -17,42 +17,7 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
+source ~/dotfiles/nushell/zoxide.nu
+source ~/dotfiles/nushell/aliases.nu
 
-# UI config
-## Get shell colors
-#cat ~/.cache/wal/sequences
-$env.config.show_banner = false
-$env.PROMPT_INDICATOR = "::󰘧 "
-
-# Aliases 
-alias n = nvim
-alias tags = easytag ~/Music/
-
-# Add Tooling
-$env.path ++= ['/home/ideale/scripts/']
-$env.path ++= ['/home/ideale/scripts/fzf/']
-$env.path ++= ['/home/ideale/.local/bin/']
-
-let $ZK_NOTEBOOK_DIR = "~/notebook/"
-
-let quotes = [
-  "I use arch btw"
-
-  "Emacs cured my autism
-  @Emerald Mcs. et al., PhD"
-
-  "I love vim; I'm just as unproductive as before, but in a more efficient manner.
-  @mkultrasoldier"
-
-  "People don't quit Emacs, they just die at some point
-  @Emerald Mcs. et al., PhD"
-
-  "There are 5 games written in rust and 50 game engines
-  @Jester Hartman"
-
-  "GNU is bloat
-  @MentalOutlaw"
-]
-
-cowsay -f tux ($quotes | shuffle | first)
-
+~/scripts/quote

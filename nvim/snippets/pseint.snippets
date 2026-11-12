@@ -1,0 +1,51 @@
+snippet alg Algoritmo
+    Algoritmo ${1:nombre}
+        $2
+    FinAlgoritmo
+snippet es Escribir
+    Escribir $1
+snippet le Leer
+    Leer $1
+snippet dc Definir como caracter
+    Definir ${1:var} Como Caracter
+snippet de Definir como entero
+    Definir ${1:var} Como Entero
+snippet dl Definir como logico
+    Definir ${1:var} Como Logico
+snippet dr Definir como real
+    Definir ${1:var} Como Real
+snippet asg Asignar
+    ${1:var}<-${2:exp}
+snippet si Si
+    Si ${1:cond} Entonces
+        $2
+    Fin Si
+snippet sn Si SiNo
+    Si ${1:cond} Entonces
+        $2
+    SiNo
+        $3
+    Fin Si
+snippet seg Segun
+    Segun $1 Hacer
+        $2:
+            $3
+        De Otro Modo:
+            $4
+    Fin Segun
+snippet mie Mientras
+    Mientras ${1:cond} Hacer
+        $2
+    Fin Mientras
+snippet rep Repetir
+    Repetir
+        $1
+    Hasta Que $2
+snippet par Para
+    Para ${1:var}<-${2:val} Hasta ${3:fin} Con Paso paso Hacer
+        $4
+    Fin Para
+snippet fn Funcion
+    Funcion ${1:ret} <- ${2:sym}($3)
+        $4
+    Fin Funcion

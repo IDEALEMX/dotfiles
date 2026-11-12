@@ -102,8 +102,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "#ac0909ff",
-            inactive_border = "#0b0505ff",
+            active_border = "#b49987ff",
+            inactive_border = "#190a0aff",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -127,7 +127,7 @@ hl.config({
             enabled      = true,
             range        = 50,
             render_power = 4,
-            color = "#E60C0C15",
+            color = "#F0CDB515",
         },
 
         blur = {
@@ -341,6 +341,8 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 -- Screenshot taking
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+
+hl.bind("SUPER + o", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
