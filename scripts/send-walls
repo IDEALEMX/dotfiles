@@ -1,6 +1,6 @@
 #!/bin/nu
 
-let remote = "u0_a395@192.168.100.32"
+let remote = "u0_a395@192.168.100.46"
 let port = 8022
 let remote_dir = "~/storage/pictures/"
 
