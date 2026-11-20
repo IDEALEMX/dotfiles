@@ -40,6 +40,10 @@
       "rev": "8c4a9f621ec7cdc30411a1f3b6d5eebb12b469dc",
       "src": "https://github.com/nvimtools/hydra.nvim"
     },
+    "kulala.nvim": {
+      "rev": "de0e6370e4ffa1a8da95cb4ff9b8a3057e0ac6e5",
+      "src": "https://github.com/dont-be-evil-company/kulala.nvim"
+    },
     "lazydev.nvim": {
       "rev": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d",
       "src": "https://github.com/folke/lazydev.nvim"
