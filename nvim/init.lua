@@ -4,8 +4,10 @@ require("which-key").setup()
 
 vim.pack.add({
     { src = "https://github.com/ibhagwan/fzf-lua" },
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter.git"}
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter.git" },
 })
+
+-- require("curl").setup({})
 
 require("gb.behaviour")
 require("gb.ui")
@@ -19,6 +21,7 @@ require("modules.lsp")
 require("modules.oil")
 require("modules.files")
 require("modules.orgmode")
+require("modules.curl")
 --require("modules.zoxide")
 --require("modules.neogit")
 

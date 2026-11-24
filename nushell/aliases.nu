@@ -4,6 +4,9 @@ alias nf = nvim +"FzfLua files"
 alias ng = nvim +"FzfLua live_grep"
 alias nr = nvim +"FzfLua history"
 
+  # WEB DEV RELATED
+alias nc = nvim +"CurlOpen"
+
 # LS
 alias l = eza --icons always
 alias ll = eza -lh --icons --git
@@ -14,6 +17,8 @@ alias lt = eza --tree --icons always
 alias grep = rg --color=auto
 alias diff = diff --color=auto
 alias df = df -h
+alias s = sudo
+alias sp = sudo pacman
 
 # TMUX
 alias t = tmux

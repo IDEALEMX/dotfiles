@@ -24,6 +24,10 @@
       "rev": "f6bcea78afb3060b198125256f897040538bcb81",
       "src": "https://github.com/famiu/bufdelete.nvim"
     },
+    "curl.nvim": {
+      "rev": "f3c258e57d56a6158733a9e3bb5eeb931f204d19",
+      "src": "https://github.com/oysandvik94/curl.nvim"
+    },
     "fine-cmdline.nvim": {
       "rev": "6e646f4da6afe856e36f3d952489b723d1475638",
       "src": "https://github.com/VonHeikemen/fine-cmdline.nvim"

@@ -1,0 +1,13 @@
+snippet lh3000 LocalHost3000
+    https://localhost:3000
+
+snippet jpost JsonPost
+    curl -X POST ${1:url} 
+    -H 'Content-type: application/json'
+    -d
+    {
+        ${2:json}
+    }
+
+snippet get Get
+    curl -X GET ${1:url}
