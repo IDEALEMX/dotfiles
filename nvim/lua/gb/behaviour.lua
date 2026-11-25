@@ -32,3 +32,6 @@ vim.g.mapleader = " "
 vim.o.undofile = true
 vim.o.swapfile = false
 vim.o.backup = false
+
+----< Disable folding >----
+vim.opt.foldenable = false

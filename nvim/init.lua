@@ -22,6 +22,7 @@ require("modules.oil")
 require("modules.files")
 require("modules.orgmode")
 require("modules.curl")
+require("modules.sql")
 --require("modules.zoxide")
 --require("modules.neogit")
 
