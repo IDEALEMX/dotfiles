@@ -38,5 +38,16 @@ require("blink.cmp").setup({
 
     sources = {
         default = { "lsp", "path", "snippets", "buffer" },
+
+        per_filetype = {
+            sql = { "dadbod", "snippets", "buffer" },
+        },
+
+        providers = {
+            dadbod = {
+                name = "Dadbod",
+                module = "vim_dadbod_completion.blink",
+            },
+        },
     },
 })

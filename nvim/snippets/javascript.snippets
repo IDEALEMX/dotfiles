@@ -1,4 +1,16 @@
-snippet route ExpressRoute
+snippet rt ExpressRoute
     app.${1:method}('${2:route}', (req, res) => {
         $3
     })
+
+snippet art AsyncExpressRoute
+    app.${1:method}('${2:route}', async(req, res) => {
+        $3
+    })
+
+snippet tce TryCatchErr
+    try {
+        $1
+    } catch (err) {
+        console.error(err);    
+    }

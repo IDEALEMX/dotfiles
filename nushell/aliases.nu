@@ -3,6 +3,7 @@ alias n = nvim
 alias nf = nvim +"FzfLua files"
 alias ng = nvim +"FzfLua live_grep"
 alias nr = nvim +"FzfLua history"
+alias nd = nvim +"DBUIToggle"
 
   # WEB DEV RELATED
 alias nc = nvim +"CurlOpen"
