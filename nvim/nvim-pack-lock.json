@@ -28,6 +28,10 @@
       "rev": "f3c258e57d56a6158733a9e3bb5eeb931f204d19",
       "src": "https://github.com/oysandvik94/curl.nvim"
     },
+    "ejs.nvim": {
+      "rev": "62bc9264086bb57884377cd07b4764ec6c703c04",
+      "src": "https://github.com/ConnorOnTheWeb/ejs.nvim"
+    },
     "fine-cmdline.nvim": {
       "rev": "6e646f4da6afe856e36f3d952489b723d1475638",
       "src": "https://github.com/VonHeikemen/fine-cmdline.nvim"
@@ -85,6 +89,14 @@
       "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
       "src": "https://github.com/rcarriga/nvim-notify"
     },
+    "nvim-possession": {
+      "rev": "559940aa77f7b78e6c2df49f4bb5233bb60f5df3",
+      "src": "https://github.com/gennaro-tedesco/nvim-possession"
+    },
+    "nvim-tabline": {
+      "rev": "deb569d04d8b3e674ff33c3baaacdfb6f12ab460",
+      "src": "https://github.com/seblyng/nvim-tabline"
+    },
     "nvim-treesitter": {
       "rev": "a2f694478be07f89c2d03cc17858a8745a400c4b",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter.git"
@@ -121,9 +133,17 @@
       "rev": "129bce432c822300ad8b0c5f573fcf4ef42d4e52",
       "src": "https://github.com/techwizrd/render-latex.nvim"
     },
+    "resize.nvim": {
+      "rev": "0b8943ef2ce54e65b9e56974e94dee593b28e7b5",
+      "src": "https://github.com/0xm4n/resize.nvim"
+    },
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim"
+    },
+    "tabby.nvim": {
+      "rev": "3c130e1fcb598ce39a9c292847e32d7c3987cf11",
+      "src": "https://github.com/nanozuki/tabby.nvim"
     },
     "vim-dadbod": {
       "rev": "6d1d41da4873a445c5605f2005ad2c68c99d8770",

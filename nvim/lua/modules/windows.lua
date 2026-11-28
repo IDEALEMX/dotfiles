@@ -1,88 +1,21 @@
-local wk = require("which-key")
+local wk = require('which-key')
 
-local root = '<leader>w'
+vim.pack.add({'https://github.com/0xm4n/resize.nvim'})
+
 wk.add({
-    { root, group = 'Windows' },
-    { root .. 'q', '', desc = 'Quit'},
+    {'<A-h>', '<C-w>h'},
+    {'<A-l>', '<C-w>l'},
+    {'<A-k>', '<C-w>k'},
+    {'<A-j>', '<C-w>j'},
 
-    { root .. 'n', function()
-        vim.g.run("<C-w>w")
-        wk.show(root)
-    end, desc = ' Next', icon = {
-        icon = "󰧸",
-        color = "azure"
-    }},
+    {'<A-L>', "<cmd>lua require('resize').ResizeRight()<CR>"},
+    {'<A-H>', "<cmd>lua require('resize').ResizeLeft()<CR>"},
+    {'<A-J>', "<cmd>lua require('resize').ResizeDown()<CR>"},
+    {'<A-K>', "<cmd>lua require('resize').ResizeUp()<CR>"},
 
-    { root .. 'p', function()
-        vim.g.run("<C-w>W")
-        wk.show(root)
-    end, desc = ' Previous', icon = {
-        icon = "󰧸",
-        color = "azure"
-    }},
+    {'<A-s>', '<C-w>s'},
+    {'<A-v>', '<C-w>v'},
 
-    { root .. 'v', function()
-        vim.g.run("<C-w>v")
-        wk.show(root)
-    end, desc = ' Vsplit', icon = {
-        icon = "󰡼",
-        color = "azure"
-    }},
-
-    { root .. 's', function()
-        vim.g.run("<C-w>s")
-        wk.show(root)
-    end, desc = ' Split', icon = {
-        icon = "󰡼",
-        color = "azure"
-    }},
-
-    { root .. '<tab>', function()
-        wk.show("<leader>b")
-    end, desc = 'Buffers', icon = {
-        icon = "󰂺",
-        color = "azure"
-    }},
-
-    { root .. 'k', function()
-        vim.g.run("<C-w>c")
-        wk.show(root)
-    end, desc = ' Kill', icon = {
-        icon = "󱐘",
-        color = "azure"
-    }},
-
-    -- move
-    { root .. 'L', function()
-        vim.g.run("<C-w>3>")
-        wk.show(root)
-    end, desc = ' Right', icon = {
-        icon = "󰧸",
-        color = "azure"
-    }},
-
-    { root .. 'H', function()
-        vim.g.run("<C-w>3<")
-        wk.show(root)
-    end, desc = ' Left', icon = {
-        icon = "󰧸",
-        color = "azure"
-    }},
-
-    { root .. 'K', function()
-        vim.g.run("<C-w>3+")
-        wk.show(root)
-    end, desc = ' Up', icon = {
-        icon = "󰧸",
-        color = "azure"
-    }},
-
-    { root .. 'J', function()
-        vim.g.run("<C-w>3-")
-        wk.show(root)
-    end, desc = ' Down', icon = {
-        icon = "󰧸",
-        color = "azure"
-    }},
+    {'<A-c>', '<C-w>c'},
+    {'<A-c>', '<C-w>c', mode = "t"},
 })
-

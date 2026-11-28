@@ -32,3 +32,6 @@ callback = function ()
 
 ----< Set fzf-lua as default selector >----
 require("fzf-lua").register_ui_select()
+
+----< Tab line >-----
+vim.o.showtabline = 2

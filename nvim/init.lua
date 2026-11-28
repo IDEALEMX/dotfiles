@@ -7,15 +7,13 @@ vim.pack.add({
     { src = "https://github.com/nvim-treesitter/nvim-treesitter.git" },
 })
 
--- require("curl").setup({})
-
 require("gb.behaviour")
 require("gb.ui")
 require("gb.lib")
 
 ----< GLOBAL MODULES >----
---require("modules.buffers")
---require("modules.windows")
+require("modules.buffers")
+require("modules.windows")
 require("modules.lualine")
 require("modules.lsp")
 require("modules.oil")
@@ -23,7 +21,11 @@ require("modules.files")
 require("modules.orgmode")
 require("modules.curl")
 require("modules.sql")
---require("modules.zoxide")
+require("modules.zoxide")
+require("modules.possesion")
+require("modules.tabline")
+require("modules.terminal")
+require("modules.ejs")
 --require("modules.neogit")
 
 require("filetypes.lua")
